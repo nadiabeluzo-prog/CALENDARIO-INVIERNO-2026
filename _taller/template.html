@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Calendario Producción · Invierno 2026 — Batuk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#faf7f2;
+  --paper:#ffffff;
+  --ink:#0e0e0e;
+  --ink-soft:#3a3a3a;
+  --ink-mute:#8a8782;
+  --line:#e8e3da;
+  --line-strong:#1a1a1a;
+  --accent:#0e0e0e;
+  --hilite:#ff5470;
+  --bw:#7fb3d5;
+  --bbw:#e7a4b6;
+  --bh:#5a8f5e;
+  --bhw:#9b7ed4;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--cream);color:var(--ink);font-family:'Inter',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.serif{font-family:'Playfair Display',Georgia,serif}
+.caps{text-transform:uppercase;letter-spacing:.2em;font-weight:600}
+header.top{position:sticky;top:0;z-index:50;background:rgba(250,247,242,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top-inner{max-width:1640px;margin:0 auto;padding:22px 32px;display:flex;align-items:center;gap:32px;flex-wrap:wrap}
+.brand{display:flex;align-items:baseline;gap:16px}
+.brand .mark{font-family:'Playfair Display',Georgia,serif;font-size:32px;font-weight:800;letter-spacing:.02em;color:var(--ink);line-height:1}
+.brand .sep{width:1px;height:22px;background:var(--line-strong);align-self:center}
+.brand .meta{display:flex;flex-direction:column;line-height:1.2}
+.brand .meta .t{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);font-weight:600}
+.brand .meta .d{font-size:11px;color:var(--ink-mute);margin-top:2px;letter-spacing:.04em}
+.stats{display:flex;gap:0;margin-left:auto;border:1px solid var(--line);border-radius:0;background:var(--paper)}
+.stat{display:flex;flex-direction:column;padding:10px 18px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat .num{font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:700;line-height:1;color:var(--ink)}
+.stat .lbl{font-size:9px;color:var(--ink-mute);text-transform:uppercase;letter-spacing:.18em;margin-top:6px;font-weight:600}
+.controls{max-width:1640px;margin:0 auto;padding:18px 32px 4px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.search{flex:1;min-width:260px;display:flex;align-items:center;background:var(--paper);border:1px solid var(--line);padding:11px 16px;border-radius:0;transition:border-color .15s ease}
+.search:focus-within{border-color:var(--ink)}
+.search svg{flex-shrink:0;margin-right:8px;opacity:.5}
+.search input{flex:1;background:transparent;border:none;outline:none;color:var(--ink);font-size:14px;font-family:inherit;letter-spacing:.02em}
+.search input::placeholder{color:var(--ink-mute)}
+.pills{display:flex;gap:0;flex-wrap:wrap}
+.pill{padding:9px 18px;border:1px solid var(--line);border-right:0;background:var(--paper);color:var(--ink-soft);font-size:11px;font-weight:600;cursor:pointer;user-select:none;transition:all .15s ease;text-transform:uppercase;letter-spacing:.14em}
+.pill:last-child{border-right:1px solid var(--line)}
+.pill:hover{background:var(--cream);color:var(--ink)}
+.pill.active{background:var(--ink);border-color:var(--ink);color:var(--cream)}
+.pill .c{display:inline-block;margin-left:8px;font-size:10px;opacity:.65;font-weight:500}
+.pill.active .c{opacity:.7}
+.filter-row{max-width:1640px;margin:0 auto;padding:8px 32px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.filter-row .label{font-size:10px;color:var(--ink-mute);text-transform:uppercase;letter-spacing:.22em;font-weight:700;min-width:54px}
+.pill.sm{padding:7px 13px;font-size:10px;letter-spacing:.12em}
+.select-wrap{position:relative;display:inline-flex;align-items:center}
+.select-wrap select{appearance:none;-webkit-appearance:none;-moz-appearance:none;background:var(--paper);border:1px solid var(--ink);color:var(--ink);font-family:inherit;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:8px 34px 8px 14px;cursor:pointer;border-radius:0;outline:none;min-width:200px;transition:background .15s ease,color .15s ease}
+.select-wrap select:hover{background:var(--ink);color:var(--cream)}
+.select-wrap select:hover + .select-arrow{color:var(--cream)}
+.select-wrap select:focus{background:var(--ink);color:var(--cream)}
+.select-wrap select:focus + .select-arrow{color:var(--cream)}
+.select-arrow{position:absolute;right:12px;top:50%;transform:translateY(-50%);pointer-events:none;font-size:9px;color:var(--ink);letter-spacing:0;font-weight:700;transition:color .15s ease}
+.legend{max-width:1640px;margin:14px auto 0;padding:0 32px;color:var(--ink-mute);font-size:11px;letter-spacing:.04em}
+.ticket-bar{max-width:1640px;margin:14px auto 0;padding:0 32px;display:flex;gap:0;flex-wrap:wrap}
+.ticket{flex:1;min-width:170px;border:1px solid var(--line);border-right:0;padding:12px 16px;background:var(--paper);display:flex;flex-direction:column;gap:6px}
+.ticket:first-child{border-radius:8px 0 0 8px}
+.ticket:last-child{border-right:1px solid var(--line);border-radius:0 8px 8px 0}
+.ticket .lbl{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-mute);font-weight:700}
+.ticket .num{font-family:'Inter',sans-serif;font-size:16px;font-weight:700;color:var(--ink);letter-spacing:0}
+.ticket .sub{font-family:'Inter',sans-serif;font-size:16px;font-weight:500;color:var(--ink-mute);letter-spacing:0}
+.ticket.entregado{background:linear-gradient(180deg,var(--paper) 0,#f0ebe0 100%)}
+.ticket.pendiente{background:linear-gradient(180deg,var(--paper) 0,#f3ede2 100%)}
+.card .pprice{font-family:'Playfair Display',Georgia,serif;font-size:14px;font-weight:600;color:var(--ink);margin-top:4px;letter-spacing:-.01em}
+.modal .row.price{font-weight:700}
+main{max-width:1640px;margin:0 auto;padding:18px 32px 80px}
+.month{margin-top:36px}
+.month-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:22px;padding-bottom:14px;border-bottom:1px solid var(--line-strong)}
+.month-name{font-family:'Playfair Display',Georgia,serif;font-size:48px;font-weight:700;letter-spacing:-.01em;line-height:.95;color:var(--ink)}
+.month-name em{font-style:italic;font-weight:500;color:var(--ink-mute);font-size:.5em;margin-left:14px;letter-spacing:.04em;font-family:'Inter',sans-serif;text-transform:uppercase;font-weight:600}
+.month-meta{font-size:11px;color:var(--ink-mute);text-transform:uppercase;letter-spacing:.18em;font-weight:600;text-align:right;line-height:1.7}
+.month-meta strong{color:var(--ink);font-weight:700}
+.month-meta .vol-sub{font-style:normal;font-size:9px;letter-spacing:.12em;color:var(--ink-mute);opacity:.75;font-weight:500}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(135px,1fr));gap:14px 10px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:10px;overflow:hidden;cursor:pointer;transition:transform .2s ease,box-shadow .25s ease,border-color .15s ease;display:flex;flex-direction:column;position:relative}
+.card:hover{transform:translateY(-2px);border-color:var(--ink);box-shadow:0 8px 22px rgba(0,0,0,.06)}
+.card[data-brand="BATUK"]{border-top:3px solid var(--bw)}
+.card[data-brand="BATUK W"]{border-top:3px solid var(--bbw)}
+.card[data-brand="HUOKY"]{border-top:3px solid var(--bh)}
+.card[data-brand="HUOKY W"]{border-top:3px solid var(--bhw)}
+.card .photo{position:relative;aspect-ratio:3/4;background:#f3efe8;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.card .photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.card:hover .photo img{transform:scale(1.04)}
+.card .photo .placeholder{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:18px;background:linear-gradient(135deg,var(--ph-c1,#2a2b35),var(--ph-c2,#1b1c25));color:#fff}
+.card .photo .placeholder .name{font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:600;line-height:1.05;text-align:center;letter-spacing:.01em}
+.card .photo .placeholder .sub{margin-top:10px;font-size:9px;text-transform:uppercase;letter-spacing:.22em;opacity:.78;font-weight:600}
+.card.has-photo .placeholder{display:none}
+.card .qty-badge{position:absolute;top:10px;right:10px;background:var(--ink);color:var(--cream);padding:4px 9px;font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.card .qty-badge .u{margin-left:3px;opacity:.65;font-size:9px}
+.card .cod-badge{position:absolute;top:10px;left:10px;background:var(--cream);color:var(--ink);padding:4px 8px;font-size:9px;font-weight:700;letter-spacing:.1em;border:1px solid var(--ink)}
+.card .photo-flag{position:absolute;bottom:10px;left:10px;background:var(--paper);color:var(--ink);padding:3px 8px;font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--ink)}
+.card .info{padding:8px 10px 10px;border-top:1px solid var(--line)}
+.card .info .pname{font-family:'Inter',sans-serif;font-size:11px;font-weight:600;letter-spacing:.03em;line-height:1.2;color:var(--ink);text-transform:uppercase;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.card .info .prubro{font-size:9px;color:var(--ink-mute);text-transform:uppercase;margin-top:3px;letter-spacing:.14em;font-weight:500}
+.card .info .pmarca{display:inline-block;margin-top:8px;padding:3px 8px;font-size:8px;text-transform:uppercase;letter-spacing:.18em;font-weight:700;border:1px solid;border-radius:0}
+.card[data-brand="BATUK"] .pmarca{color:var(--bw);border-color:var(--bw)}
+.card[data-brand="BATUK W"] .pmarca{color:#c44b6c;border-color:var(--bbw)}
+.card[data-brand="HUOKY"] .pmarca{color:var(--bh);border-color:var(--bh)}
+.card[data-brand="HUOKY W"] .pmarca{color:var(--bhw);border-color:var(--bhw)}
+.card .origen-tag{display:inline-block;margin-left:6px;padding:2px 6px;font-size:8px;text-transform:uppercase;letter-spacing:.14em;font-weight:600;border-radius:2px;vertical-align:1px}
+.card .origen-tag.nac{background:#eef2eb;color:#4a5d3a}
+.card .origen-tag.imp{background:#fff1e0;color:#a65a16;border:1px solid #f0c896}
+.card .info .pbot{font-size:9px;color:var(--ink-mute);margin-top:6px;text-transform:uppercase;letter-spacing:.1em;font-weight:500;line-height:1.2}
+.pill.has-sub{display:inline-flex;flex-direction:column;align-items:center;line-height:1.2;padding:6px 10px}
+.pill.has-sub .pill-main{display:flex;align-items:center;gap:6px}
+.pill.has-sub .pill-sub{font-size:9px;color:var(--ink-mute);margin-top:2px;text-transform:none;letter-spacing:0;font-weight:500}
+.pill.has-sub.active .pill-sub{color:rgba(255,255,255,.8)}
+.ticket .brk{display:block;font-size:10px;color:var(--ink-mute);margin-top:2px;letter-spacing:.06em;font-weight:500}
+.group-head{font-family:'Inter',sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:.24em;font-weight:800;padding:14px 20px;margin:28px 0 16px;display:flex;align-items:center;justify-content:space-between;border:2px solid;border-radius:6px;position:relative}
+.group-head::before{content:"";position:absolute;left:-2px;top:-2px;bottom:-2px;width:6px;border-radius:6px 0 0 6px}
+.group-head.entregado{color:#3d5230;background:#eef2eb;border-color:#9bb287}
+.group-head.entregado::before{background:#6b8e4e}
+.group-head.pendiente{color:#6e4a1d;background:#fbf3e3;border-color:#d6b572}
+.group-head.pendiente::before{background:#c08a2e}
+.group-head .g-count{font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:700;color:inherit;letter-spacing:0;text-transform:none;background:rgba(255,255,255,.55);padding:2px 12px;border-radius:14px;border:1px solid currentColor}
+.card .colors{display:flex;gap:5px;margin-top:10px;flex-wrap:wrap}
+.color-dot{width:11px;height:11px;border-radius:50%;border:1px solid var(--ink);box-shadow:inset 0 0 0 1px rgba(255,255,255,.5)}
+.empty{color:var(--ink-mute);padding:60px 20px;text-align:center;border:1px dashed var(--line-strong);font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:18px}
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(14,14,14,.55);z-index:100;padding:24px;backdrop-filter:blur(4px)}
+.modal.open{display:flex}
+.modal-card{background:var(--cream);max-width:780px;width:100%;padding:32px;border:1px solid var(--line-strong);max-height:90vh;overflow-y:auto;position:relative}
+.modal-card h2{margin:6px 0 4px;font-family:'Playfair Display',Georgia,serif;font-size:36px;font-weight:700;letter-spacing:-.005em;line-height:1}
+.modal-card .meta{color:var(--ink-mute);font-size:11px;margin-bottom:20px;text-transform:uppercase;letter-spacing:.2em;font-weight:600}
+.modal-card .row{display:flex;justify-content:space-between;padding:11px 0;border-top:1px solid var(--line);font-size:13px;gap:16px}
+.modal-card .row span:first-child{color:var(--ink-mute);text-transform:uppercase;letter-spacing:.16em;font-size:10px;font-weight:600;align-self:center}
+.modal-card .row span:last-child{text-align:right;font-weight:500;letter-spacing:.02em}
+.modal-card .modal-photo{width:100%;max-height:420px;object-fit:contain;background:#f3efe8;margin-bottom:18px;display:none}
+.modal-card .modal-photo.show{display:block}
+.modal-actions{display:flex;gap:0;margin-top:24px;flex-wrap:wrap}
+.modal-actions a{flex:1;min-width:160px;padding:14px;text-align:center;font-weight:600;font-size:11px;letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--ink-mute);border-right:0;transition:all .15s}
+.modal-actions a:last-child{border-right:1px solid var(--ink-mute)}
+.modal-actions a:hover{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.btn-primary{background:var(--ink);color:var(--cream);border-color:var(--ink) !important}
+.close-x{position:absolute;top:16px;right:20px;cursor:pointer;color:var(--ink-mute);font-size:28px;line-height:1;font-weight:300}.close-x:hover{color:var(--ink)}
+footer{max-width:1640px;margin:60px auto 0;padding:32px;color:var(--ink-mute);font-size:10px;border-top:1px solid var(--line);text-align:center;text-transform:uppercase;letter-spacing:.18em;font-weight:600}
+@media (max-width:720px){
+  .top-inner{padding:14px 18px;gap:14px}
+  .brand .mark{font-size:24px}
+  .stats{margin-left:0;width:100%;justify-content:space-between}
+  .stat{padding:8px 12px}
+  .stat .num{font-size:18px}
+  .controls,.filter-row,.legend,main,footer{padding-left:18px;padding-right:18px}
+  .month-name{font-size:32px}
+  .month-meta{font-size:10px}
+  .month-head{flex-direction:column;align-items:flex-start;gap:6px}
+  .month-meta{text-align:left}
+  .grid{grid-template-columns:repeat(4,1fr);gap:8px 6px}
+  .card{border-radius:8px}
+  .card .pname{font-size:10px;line-height:1.2}
+  .card .prubro{font-size:8px;letter-spacing:.08em}
+  .card .pmarca{font-size:8px;letter-spacing:.08em}
+  .card .pprice{font-size:11px}
+  .card .info{padding:6px 6px 8px}
+  .card .qty-badge{padding:2px 5px;font-size:8px;top:5px;right:5px}
+  .card .cod-badge{padding:2px 4px;font-size:7px;top:5px;left:5px;letter-spacing:.04em}
+  .card .photo-flag{font-size:7px;padding:2px 4px}
+  .card .color-dot{width:7px;height:7px}
+  .card .colors{gap:3px}
+  .ticket-bar{padding:0 14px;flex-wrap:nowrap;gap:6px}
+  .ticket{flex:1;min-width:0;padding:8px 8px;border-radius:6px !important;border:1px solid var(--line) !important;gap:3px}
+  .ticket .lbl{font-size:8px;letter-spacing:.1em}
+  .ticket .num{font-size:13px}
+  .ticket .sub{font-size:11px}
+  .select-wrap{flex:1;min-width:0}
+  .select-wrap select{width:100%;min-width:0;font-size:10px;padding:7px 28px 7px 10px}
+}
+</style></head><body>
+<header class="top"><div class="top-inner">
+<div class="brand">
+  <span class="mark">Batuk</span>
+  <span class="sep"></span>
+  <div class="meta"><span class="t">Calendario de Producción</span><span class="d">Invierno 2026 — Maestro Matriz</span></div>
+</div>
+</div></header>
+<div class="controls"><div class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input id="q" type="text" placeholder="Buscar producto, código o color..." /></div><div class="pills" id="month-pills"></div></div>
+<div class="filter-row"><span class="label">Marca</span><div class="pills" id="marca-pills"></div></div>
+<div class="filter-row"><span class="label">Rubro</span><div class="select-wrap"><select id="rubro-select"></select><span class="select-arrow">v</span></div></div>
+<div class="filter-row"><span class="label">Estado</span><div class="pills" id="status-pills"></div></div>
+<div class="filter-row"><span class="label">Origen</span><div class="pills" id="origen-pills"></div></div>
+<div class="ticket-bar" id="ticket-bar"></div>
+<div class="legend">Hacé click en cualquier producto para ver detalle. Las tarjetas con bandera <strong>FOTO</strong> muestran el geometral o foto subida.</div>
+<main id="board"></main>
+<div class="modal" id="modal" onclick="closeModal()">
+<div class="modal-card" onclick="event.stopPropagation()">
+<span class="close-x" onclick="closeModal()">&times;</span>
+<img id="m-photo" class="modal-photo" alt="" />
+<h2 id="m-name"></h2><div class="meta" id="m-meta"></div>
+<div class="row"><span>Código</span><span id="m-cod"></span></div>
+<div class="row"><span>Mes ingreso producción</span><span id="m-mes"></span></div>
+<div class="row"><span>Cantidad</span><span id="m-cant"></span></div>
+<div class="row price"><span>Precio sugerido</span><span id="m-precio"></span></div>
+<div class="row"><span>Rubro</span><span id="m-rubro"></span></div>
+<div class="row"><span>Color</span><span id="m-color"></span></div>
+<div class="row"><span>Categoría</span><span id="m-cat"></span></div>
+<div class="row"><span>Marca</span><span id="m-marca"></span></div>
+<div class="row"><span>Estado</span><span id="m-status"></span></div>
+<div class="row"><span>Origen</span><span id="m-origen"></span></div>
+<div class="modal-actions">
+<a id="m-busc" target="_blank" class="btn-primary">Ver en batuk.com.ar</a>
+<a id="m-google" target="_blank">Buscar en Google</a>
+</div></div></div>
+<footer>Generado de "MAESTRO-MATRIZ DE COLECCION INVIERNO 2026.xlsx" · Hoja 01-MAESTRO MATERIALES INV · Columna MES INGRESO PRODUCCION</footer>
+<script>
+const PRODUCTOS = __PRODUCTOS__;
+const COLOR_HEX = __COLORS__;
+const MES_ORDER = ['FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO'];
+const MES_LABEL = {'FEBRERO':'Febrero','MARZO':'Marzo','ABRIL':'Abril','MAYO':'Mayo','JUNIO':'Junio','JULIO':'Julio'};
+const COUNTS={},UNITS={},PHOTOS={};
+for(const m of MES_ORDER){COUNTS[m]=0;UNITS[m]=0;PHOTOS[m]=0;}
+for(const p of PRODUCTOS){if(COUNTS[p.mes]!==undefined){COUNTS[p.mes]++;UNITS[p.mes]+=p.cant;if(p.foto)PHOTOS[p.mes]++;}}
+const TOT_SKU=Object.values(COUNTS).reduce((a,b)=>a+b,0),TOT_U=Object.values(UNITS).reduce((a,b)=>a+b,0),TOT_FOTO=Object.values(PHOTOS).reduce((a,b)=>a+b,0),TOT_MES=MES_ORDER.filter(m=>COUNTS[m]>0).length;
+let pillsHtml='<span class="pill" data-mes="ALL">Todos<span class="c">'+TOT_SKU+'</span></span>';
+for(const m of MES_ORDER) if(COUNTS[m]>0) pillsHtml+='<span class="pill'+(m==='MAYO'?' active':'')+'" data-mes="'+m+'">'+MES_LABEL[m]+'<span class="c">'+COUNTS[m]+'</span></span>';
+document.getElementById('month-pills').innerHTML=pillsHtml;
+function normMarca(s){return (s||'').trim().toUpperCase();}
+function statusGroup(s){return ((s||'').trim().toUpperCase()==='ENTREGADO')?'ENTREGADO':'PENDIENTE';}
+function origenNorm(s){return (s||'').trim().toUpperCase();}
+let currentFilter='MAYO',currentSearch='',currentMarca='ALL',currentRubro='ALL',currentStatus='ALL',currentOrigen='ALL';
+function updatePills(){
+  const months=currentFilter==='ALL'?MES_ORDER:[currentFilter];
+  const subset=PRODUCTOS.filter(p=>months.indexOf(p.mes)>=0);
+  // MARCAS
+  const MC={};for(const p of subset){const k=normMarca(p.marca)||'—';MC[k]=(MC[k]||0)+1;}
+  const MARCAS=Object.keys(MC).sort((a,b)=>MC[b]-MC[a]);
+  let mhtml='<span class="pill sm'+(currentMarca==='ALL'?' active':'')+'" data-marca="ALL">Todas<span class="c">'+subset.length+'</span></span>';
+  for(const m of MARCAS) mhtml+='<span class="pill sm'+(currentMarca===m?' active':'')+'" data-marca="'+m+'">'+m+'<span class="c">'+MC[m]+'</span></span>';
+  document.getElementById('marca-pills').innerHTML=mhtml;
+  // RUBROS (apply marca filter first since rubro depends)
+  const subsetMarca=subset.filter(p=>currentMarca==='ALL'||normMarca(p.marca)===currentMarca);
+  const RC={};for(const p of subsetMarca){const k=(p.rubro||'').trim().toUpperCase()||'—';RC[k]=(RC[k]||0)+1;}
+  const RUBROS=Object.keys(RC).sort((a,b)=>RC[b]-RC[a]);
+  let rhtml='<option value="ALL">Todos los rubros ('+subsetMarca.length+')</option>';
+  for(const r of RUBROS) rhtml+='<option value="'+r+'"'+(currentRubro===r?' selected':'')+'>'+r+' ('+RC[r]+')</option>';
+  document.getElementById('rubro-select').innerHTML=rhtml;
+  // ESTADO con desglose Nacional/Importado
+  const subsetMR=subsetMarca.filter(p=>currentRubro==='ALL'||(p.rubro||'').trim().toUpperCase()===currentRubro);
+  const SC={ENTREGADO:{N:0,I:0,T:0},PENDIENTE:{N:0,I:0,T:0},ALL:{N:0,I:0,T:0}};
+  for(const p of subsetMR){
+    const sg=statusGroup(p.status);
+    const og=origenNorm(p.origen);
+    SC[sg].T++; SC.ALL.T++;
+    if(og==='NACIONAL'){SC[sg].N++; SC.ALL.N++;}
+    else if(og==='IMPORTADO'){SC[sg].I++; SC.ALL.I++;}
+  }
+  function pillSt(key,label){
+    const s=SC[key];
+    const sub=s.T?('<span class="pill-sub">'+s.N+' nac · '+s.I+' imp</span>'):'';
+    return '<span class="pill sm has-sub'+(currentStatus===key?' active':'')+'" data-status="'+key+'"><span class="pill-main">'+label+'<span class="c">'+s.T+'</span></span>'+sub+'</span>';
+  }
+  let shtml=pillSt('ALL','Todos')+pillSt('PENDIENTE','Pendiente')+pillSt('ENTREGADO','Entregado');
+  document.getElementById('status-pills').innerHTML=shtml;
+  // ORIGEN
+  const OC={NACIONAL:0,IMPORTADO:0};for(const p of subsetMR){const o=origenNorm(p.origen);if(OC[o]!==undefined)OC[o]++;}
+  let ohtml='<span class="pill sm'+(currentOrigen==='ALL'?' active':'')+'" data-origen="ALL">Todos<span class="c">'+subsetMR.length+'</span></span>';
+  ohtml+='<span class="pill sm'+(currentOrigen==='NACIONAL'?' active':'')+'" data-origen="NACIONAL">Nacional<span class="c">'+OC.NACIONAL+'</span></span>';
+  ohtml+='<span class="pill sm'+(currentOrigen==='IMPORTADO'?' active':'')+'" data-origen="IMPORTADO">Importado<span class="c">'+OC.IMPORTADO+'</span></span>';
+  document.getElementById('origen-pills').innerHTML=ohtml;
+}
+updatePills();
+function colorOf(n){return COLOR_HEX[n.trim().toUpperCase()]||'#888'}
+function placeholderColors(p){const cs=(p.color||'').split(',').map(s=>s.trim()).filter(Boolean);return [colorOf(cs[0]||'GRIS'), cs.length>1?colorOf(cs[1]):'#1b1c25']}
+function escapeHtml(s){return String(s||'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]))}
+function renderCard(p){
+  const ph=placeholderColors(p);
+  const c1=ph[0],c2=ph[1];
+  const cols=(p.color||'').split(',').map(s=>s.trim()).filter(Boolean);
+  const dots=cols.map(c=>'<span class="color-dot" style="background:'+colorOf(c)+'" title="'+escapeHtml(c)+'"></span>').join('');
+  const has=p.foto?true:false;
+  const flag=has?'<div class="photo-flag">FOTO</div>':'';
+  const img=has?'<img src="'+p.foto+'" alt="'+escapeHtml(p.nombre)+'" loading="lazy"/>':'';
+  const brand=escapeHtml(normMarca(p.marca));
+  const og=origenNorm(p.origen);
+  const origenTag=og==='IMPORTADO'?'<span class="origen-tag imp">Importado</span>':(og==='NACIONAL'?'<span class="origen-tag nac">Nacional</span>':'');
+  const bot=p.botonera?'<div class="pbot">'+escapeHtml(p.botonera)+'</div>':'';
+  return '<div class="card '+(has?'has-photo':'')+'" data-idx="'+p._i+'" data-brand="'+brand+'"><div class="photo" style="--ph-c1:'+c1+';--ph-c2:'+c2+';">'+img+'<div class="placeholder"><div class="name">'+escapeHtml(p.nombre)+'</div><div class="sub">'+escapeHtml(p.rubro||'')+'</div></div><div class="cod-badge">'+escapeHtml(p.cod)+'</div><div class="qty-badge">'+p.cant.toLocaleString('es-AR')+'<span class="u">u</span></div>'+flag+'</div><div class="info"><div class="pname" title="'+escapeHtml(p.nombre)+'">'+escapeHtml(p.nombre)+'</div><div class="prubro">'+escapeHtml(p.rubro||'')+'</div><div class="pmarca">'+brand+origenTag+'</div>'+bot+'<div class="colors">'+dots+'</div>'+(p.precio?'<div class="pprice">$ '+p.precio.toLocaleString('es-AR')+'</div>':'')+'</div></div>';
+}
+function fmt$(n){return '$ '+Math.round(n).toLocaleString('es-AR');}
+function renderTicket(){
+  const months=currentFilter==='ALL'?MES_ORDER:[currentFilter];
+  const q=currentSearch.toLowerCase();
+  const items=PRODUCTOS.filter(p=>months.indexOf(p.mes)>=0)
+    .filter(p=>currentMarca==='ALL'||normMarca(p.marca)===currentMarca)
+    .filter(p=>currentRubro==='ALL'||(p.rubro||'').trim().toUpperCase()===currentRubro)
+    .filter(p=>currentOrigen==='ALL'||origenNorm(p.origen)===currentOrigen)
+    .filter(p=>!q||(p.nombre+' '+p.cod+' '+p.color+' '+p.rubro+' '+p.marca).toLowerCase().includes(q));
+  const ent=items.filter(p=>statusGroup(p.status)==='ENTREGADO');
+  const pen=items.filter(p=>statusGroup(p.status)==='PENDIENTE');
+  function avg(arr){const w=arr.filter(x=>x.precio>0);if(w.length===0)return 0;return w.reduce((s,x)=>s+x.precio,0)/w.length;}
+  const tEnt=avg(ent),tPen=avg(pen),tAll=avg(items);
+  function brk(arr){const n=arr.filter(x=>origenNorm(x.origen)==='NACIONAL').length;const i=arr.filter(x=>origenNorm(x.origen)==='IMPORTADO').length;return '<span class="brk">Nac '+n+' · Imp '+i+'</span>';}
+  document.getElementById('ticket-bar').innerHTML=
+    '<div class="ticket entregado"><span class="lbl">Ticket prom. Entregado</span><span class="num">'+fmt$(tEnt)+'</span><span class="sub">'+ent.length+' SKUs</span>'+brk(ent)+'</div>'+
+    '<div class="ticket pendiente"><span class="lbl">Ticket prom. Pendiente</span><span class="num">'+fmt$(tPen)+'</span><span class="sub">'+pen.length+' SKUs</span>'+brk(pen)+'</div>'+
+    '<div class="ticket"><span class="lbl">Ticket prom. Total</span><span class="num">'+fmt$(tAll)+'</span><span class="sub">'+items.length+' SKUs</span>'+brk(items)+'</div>';
+}
+function renderGrouped(items){
+  // Si filtro entregado solo: grid plano
+  if(currentStatus==='ENTREGADO'){
+    return '<div class="grid">'+items.map(renderCard).join('')+'</div>';
+  }
+  const ent=items.filter(p=>statusGroup(p.status)==='ENTREGADO');
+  const pen=items.filter(p=>statusGroup(p.status)==='PENDIENTE');
+  let html='';
+  if(currentStatus==='ALL' && ent.length>0){
+    html+='<div class="group-head entregado">Entregados<span class="g-count">'+ent.length+'</span></div>';
+    html+='<div class="grid">'+ent.map(renderCard).join('')+'</div>';
+  }
+  // Agrupar pendientes por semana
+  const grupos={};
+  for(const p of pen){
+    const s=(p.semana||'').trim()||'—';
+    if(!grupos[s]) grupos[s]=[];
+    grupos[s].push(p);
+  }
+  const order=['1°','2°','3°','4°','5°','-','—'];
+  const keys=order.filter(k=>grupos[k]);
+  // Si solo hay pendientes y el filtro es ALL, mantener "Pendientes" como header padre opcional
+  for(const s of keys){
+    const lbl=(s==='-'||s==='—')?'Sin semana asignada':'Semana '+s;
+    html+='<div class="group-head pendiente">'+lbl+'<span class="g-count">'+grupos[s].length+'</span></div>';
+    html+='<div class="grid">'+grupos[s].map(renderCard).join('')+'</div>';
+  }
+  return html;
+}
+function render(){
+  PRODUCTOS.forEach((p,i)=>p._i=i);
+  renderTicket();
+  const board=document.getElementById('board'),q=currentSearch.toLowerCase();
+  let html='',total=0;
+  const months=currentFilter==='ALL'?MES_ORDER:[currentFilter];
+  const maxC=Math.max.apply(null,Object.values(COUNTS));
+  for(const m of months){
+    const items=PRODUCTOS.filter(p=>p.mes===m).filter(p=>currentMarca==='ALL'||normMarca(p.marca)===currentMarca).filter(p=>currentRubro==='ALL'||(p.rubro||'').trim().toUpperCase()===currentRubro).filter(p=>currentStatus==='ALL'||statusGroup(p.status)===currentStatus).filter(p=>currentOrigen==='ALL'||origenNorm(p.origen)===currentOrigen).filter(p=>!q||(p.nombre+' '+p.cod+' '+p.color+' '+p.rubro+' '+p.marca).toLowerCase().includes(q)).sort(function(a,b){var order={'BATUK':0,'BATUK W':1,'HUOKY':2,'HUOKY W':3};var oa=order[normMarca(a.marca)],ob=order[normMarca(b.marca)];if(oa===undefined)oa=99;if(ob===undefined)ob=99;if(oa!==ob)return oa-ob;return (a.nombre||'').localeCompare(b.nombre||'');});
+    if(items.length===0) continue;
+    total+=items.length;
+    // Volumen total: si el producto tiene CORTADO > 0 usa cortado, sino UNID PEDIDAS
+    const tu=items.reduce((s,x)=>s+((x.cortado&&x.cortado>0)?x.cortado:x.cant),0),fc=items.filter(x=>x.foto).length;
+    const cortadoTotal=items.reduce((s,x)=>s+(x.cortado||0),0);
+    const pendienteTotal=tu-cortadoTotal;
+    const volSub=(cortadoTotal>0)?(' · <em class="vol-sub">'+cortadoTotal.toLocaleString('es-AR')+' cortadas + '+pendienteTotal.toLocaleString('es-AR')+' pedidas</em>'):'';
+    html+='<section class="month"><div class="month-head"><div class="month-name">'+MES_LABEL[m]+'<em>· Invierno 26</em></div><div class="month-meta"><strong>'+items.length+'</strong> productos · <strong>'+tu.toLocaleString('es-AR')+'</strong> unidades'+volSub+' · <strong>'+fc+'</strong> con foto</div></div>'+renderGrouped(items)+'</section>';
+  }
+  if(total===0) html='<div class="empty">No hay productos que coincidan con tu búsqueda</div>';
+  board.innerHTML=html;
+  board.querySelectorAll('.card').forEach(c=>{
+    c.addEventListener('click',e=>{if(e.target.closest('a[data-stop]')) return; openModal(PRODUCTOS[parseInt(c.dataset.idx)]);});
+  });
+}
+function openModal(p){
+  const ph=document.getElementById('m-photo');
+  if(p.foto){ph.src=p.foto;ph.classList.add('show');} else {ph.classList.remove('show');ph.src='';}
+  document.getElementById('m-name').textContent=p.nombre;
+  document.getElementById('m-meta').textContent=(p.rubro||'')+' · '+(p.cat||'')+' · '+(p.marca||'');
+  document.getElementById('m-cod').textContent=p.cod;
+  document.getElementById('m-mes').textContent=MES_LABEL[p.mes]||p.mes;
+  document.getElementById('m-cant').textContent=p.cant.toLocaleString('es-AR')+' u.';
+document.getElementById('m-precio').textContent=p.precio?('$ '+p.precio.toLocaleString('es-AR')):'—';
+  document.getElementById('m-rubro').textContent=p.rubro||'—';
+  document.getElementById('m-color').textContent=p.color||'—';
+  document.getElementById('m-cat').textContent=p.cat||'—';
+  document.getElementById('m-marca').textContent=p.marca||'—';
+  document.getElementById('m-status').textContent=p.status||'—';
+  document.getElementById('m-origen').textContent=p.origen||'—';
+  document.getElementById('m-busc').href=p.url_busc;
+  document.getElementById('m-google').href=p.url_google;
+  document.getElementById('modal').classList.add('open');
+}
+function closeModal(){document.getElementById('modal').classList.remove('open')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape') closeModal()});
+document.getElementById('month-pills').addEventListener('click',e=>{
+  const p=e.target.closest('.pill'); if(!p) return;
+  document.querySelectorAll('#month-pills .pill').forEach(x=>x.classList.remove('active'));
+  p.classList.add('active'); currentFilter=p.dataset.mes;
+  currentMarca='ALL'; currentRubro='ALL'; currentStatus='ALL'; currentOrigen='ALL';
+  updatePills(); render();
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+document.getElementById('marca-pills').addEventListener('click',e=>{
+  const p=e.target.closest('.pill'); if(!p) return;
+  currentMarca=p.dataset.marca;
+  currentRubro='ALL'; currentStatus='ALL'; currentOrigen='ALL';
+  updatePills(); render();
+});
+document.getElementById('rubro-select').addEventListener('change',e=>{
+  currentRubro=e.target.value;
+  currentStatus='ALL'; currentOrigen='ALL';
+  updatePills(); render();
+});
+document.getElementById('status-pills').addEventListener('click',e=>{
+  const p=e.target.closest('.pill'); if(!p) return;
+  currentStatus=p.dataset.status;
+  updatePills(); render();
+});
+document.getElementById('origen-pills').addEventListener('click',e=>{
+  const p=e.target.closest('.pill'); if(!p) return;
+  currentOrigen=p.dataset.origen;
+  updatePills(); render();
+});
+document.getElementById('q').addEventListener('input',e=>{currentSearch=e.target.value; render();});
+render();
+</script></body></html>

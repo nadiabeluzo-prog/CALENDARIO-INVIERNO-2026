@@ -1,0 +1,53 @@
+name: Auto-sync calendario
+
+on:
+  schedule:
+    # Cada 2 hs entre las 9 y las 21 hora Argentina (UTC-3),
+    # lunes a viernes. Cron está en UTC.
+    - cron: '0 12-23/2 * * 1-5'
+  workflow_dispatch:  # permite correrlo manualmente desde la pestaña Actions
+
+permissions:
+  contents: write  # para que el bot pueda commitear nuevas fotos / state
+
+concurrency:
+  group: sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install openpyxl Pillow google-api-python-client google-auth requests
+
+      - name: Run full_sync
+        env:
+          GDRIVE_SA_JSON: ${{ secrets.GDRIVE_SA_JSON }}
+          NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: python automation/full_sync.py
+
+      - name: Commit fotos y state actualizados
+        run: |
+          git config user.name  "calendario-bot"
+          git config user.email "bot@calendario-batuk.local"
+          git add fotos/ automation/state.json _taller/productos.json _taller/precios.json web/index.html Calendario.html 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Nada que commitear"
+          else
+            git commit -m "auto-sync: $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi

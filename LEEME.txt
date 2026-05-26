@@ -1,0 +1,20 @@
+CALENDARIO INVIERNO 2026 — Carpeta de trabajo
+==============================================
+
+Estructura:
+  Calendario.html ........ El tablero final, abrilo con doble click.
+  web/ ................... Carpeta lista para arrastrar a Netlify (Deploys).
+  fotos/ ................. Imagenes por codigo de producto (BM-1234.jpg).
+                            Si reemplazas/agregas un .jpg aca, el calendario
+                            lo toma cuando vuelvas a generar.
+  _taller/ ............... Archivos internos. No los edites a mano.
+    template.html
+    build.py             ← script que arma Calendario.html y web/index.html
+    productos.json
+    precios.json
+
+Para regenerar (despues de actualizar fotos o datos):
+  python3 "_taller/build.py"
+
+Para subir a Netlify:
+  Arrastrar la carpeta "web" a la pestaña Deploys de tu sitio Netlify.

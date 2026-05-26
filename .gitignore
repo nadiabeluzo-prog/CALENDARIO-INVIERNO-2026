@@ -1,0 +1,29 @@
+# Outputs grandes regenerables (Calendario.html y web/index.html se commitean para que sean fáciles de previsualizar, pero podés ignorarlos si preferís)
+# Calendario.html
+# web/index.html
+
+# Logs
+deploy_log.txt
+*.log
+
+# Backups del taller
+_taller/*.bak
+_taller/productos.json.bak
+_taller/precios.json.bak
+
+# Tokens locales (no se suben jamás)
+*.token
+.calendario-batuk-token
+*.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
