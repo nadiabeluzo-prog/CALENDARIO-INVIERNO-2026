@@ -1,0 +1,679 @@
+{
+ "drive_files": {
+  "B-1229|BHP50DENN07": {
+   "id": "1EjKYbMl55XeHbErXKwc7QdttOUpNgv4l",
+   "modified": "2026-04-10T12:30:29.000Z",
+   "name": "BHP50DENN07 DENIM DYLAN 1 RESHOOT .jpg"
+  },
+  "H-30421|HHP52REMN03": {
+   "id": "101dprr377FoyMVLn0S5NuNiXMPUqxWBs",
+   "modified": "2026-05-06T18:05:59.000Z",
+   "name": "HHP52REMN03 REMERA NAM NEGRA ESPALDA.jpg"
+  },
+  "BM-3786|BMP50REMC34": {
+   "id": "1FK4ZUloNnMcs4KdvtUULzUU8ciQCo2D5",
+   "modified": "2026-04-06T12:47:35.168Z",
+   "name": "BMP50REMC34 REMERA AMELIE BORDO 1.jpg"
+  },
+  "BM-0430|BMP50DENN08": {
+   "id": "1umaLe3yqlO71RoJSYka9v30xe5aV4F-y",
+   "modified": "2026-03-12T11:11:27.000Z",
+   "name": "BMP50DENN08 JEAN ASHLEY BLUE 1.jpg"
+  },
+  "BM-0432|BMP50DENC27": {
+   "id": "1oXZSut7DLjEhovVY4iD_EJKxEbhbh1zo",
+   "modified": "2026-03-25T15:44:18.000Z",
+   "name": "BMP50DENC27 JEAN IVY 1.jpg"
+  },
+  "B-7388|BHP50CHIC02": {
+   "id": "13dTDc4qmcxC-RTQ5l_wdVjqlBTdRJiqp",
+   "modified": "2026-03-25T12:29:53.000Z",
+   "name": "BHP50CHIC02 CHINO PAUL NEGRO 1.jpg"
+  },
+  "B-31583|BHP50REMC22": {
+   "id": "1j0HciPjFuzKda0SGoPQgYPWhGo1qEceu",
+   "modified": "2026-03-09T15:38:33.000Z",
+   "name": "BHP50REMC22 REMERA TOM NARANJA 1.jpg"
+  },
+  "BM-0433|BMP50PANN20": {
+   "id": "19XcH4g288GXVqzks5B0kHF0RqjVAIUiW",
+   "modified": "2026-05-20T19:40:35.978Z",
+   "name": "BMP50PANN20 PANTALON ROSE 1.jpg"
+  },
+  "B-2195|BHP50BABN02": {
+   "id": "1jva65MDdGiuOkkPx3ezGLFPPD4e2pf60",
+   "modified": "2026-03-06T19:07:27.000Z",
+   "name": "BHP50BABN02 BABUCHA CONNER NEGRO 1.jpg"
+  },
+  "B-31585|BHP50REMC23": {
+   "id": "1ohM-_3zz0vxIIOqyhLmLuYd13XzNyQfO",
+   "modified": "2026-03-18T19:07:50.000Z",
+   "name": "BHP50REMC23 REMERA MATT CRUDO 1.jpg"
+  },
+  "BM-0434|BMP50DENN09": {
+   "id": "1V7qSuML1eLA6OLIBTBZWvWCXi_Jfsm6u",
+   "modified": "2026-04-30T15:04:51.000Z",
+   "name": "BMP50DENN09 DENIM NINA FRENTE.jpg"
+  },
+  "BM-3788|BMP50MUSC03": {
+   "id": "1oyRH1H5PX0SHURSiGdI0z-0-KRdjwRUK",
+   "modified": "2026-04-29T18:18:12.000Z",
+   "name": "BMP50MUSC03 MUSCULOSA ONA MARRON FRENTE.jpg"
+  },
+  "BM-7267|BMP50PANC04": {
+   "id": "1ZF7f77kbCi1H7duy1iMSUo6CL1TEzrHT",
+   "modified": "2026-04-15T14:38:06.000Z",
+   "name": "BMP50PANC04 PANTALON LIZ MELANGE 1.jpg"
+  },
+  "BM-7264|BMP50PANN19": {
+   "id": "1GS8iGNCslP_viyhND0FmUqd3xjknI8z5",
+   "modified": "2026-04-08T18:46:05.000Z",
+   "name": "BMP50PANN19 PANTALON STELLA BORDO RESHOOT 1.jpg"
+  },
+  "BM-7266/B|BMP50PANN21": {
+   "id": "1eqHxliAWW8WkVOnmFbr-q-EVj7ikjLKs",
+   "modified": "2026-04-01T11:54:30.000Z",
+   "name": "BMP50PANN21 PANTALON MARGARET GRIS editorial PORTADA.jpg"
+  },
+  "BM-3790|BMP50RELC02": {
+   "id": "1J1cURH0KTNf77wHtbqZomobZqEgjmDKm",
+   "modified": "2026-04-30T08:38:06.000Z",
+   "name": "BMP50RELC02 REMERA ZOE NEGRO 1.jpg"
+  },
+  "BM-3789|BMP50REMC32": {
+   "id": "1KazhZcWGtx9W3bzC4uW1HNn_wxhLNfqg",
+   "modified": "2026-05-14T18:12:47.000Z",
+   "name": "BMP50REMC32 REMERA OLIVIA BLANCO FRENTE.png"
+  },
+  "BM-7268|BMP60PANN23": {
+   "id": "19jGvcVM6x299BKGYgwGuKWPYXsgI1eW5",
+   "modified": "2026-04-06T12:20:49.000Z",
+   "name": "BMP60PANN23 PANTALON JOY NEGRO 1.jpg"
+  },
+  "BM-3791|BMP61RELN01": {
+   "id": "1uYjlmvzU3w0LzoHLE7r4OeFcM-3YkbWW",
+   "modified": "2026-03-10T14:26:22.000Z",
+   "name": "BMP61RELN01 REMERA GRAFITI AZUL MARINO 1.jpg"
+  },
+  "B-1868|BHP60BUCC11": {
+   "id": "1kVfY7zaM-ly0xqT3ee6mM85zAjxXqxPO",
+   "modified": "2026-03-06T18:13:01.000Z",
+   "name": "BHP60BUCC11 HOOD BILLY NEGRO 1.jpg"
+  },
+  "BM-0436|BMP50DENN10": {
+   "id": "1roWy5eTR2w-O1cozsay0KOI91bBtzSCF",
+   "modified": "2026-04-30T08:56:38.000Z",
+   "name": "BMP50DENN10 JEAN JOAN 1.jpg"
+  },
+  "BM-1469|BMP50FETC07": {
+   "id": "1gS7LtiJ3TrY7_13Xftqiz2MrS2KbL8J2",
+   "modified": "2026-03-27T12:26:10.000Z",
+   "name": "BMP50FETC07 CAMPERA FILOMENA MARRON 1.jpg"
+  },
+  "BM-0435|BMP60CAMN04": {
+   "id": "1haZYGpbjT7g5UdB8xP44g0pKMV5QiIPY",
+   "modified": "2026-04-30T08:51:50.000Z",
+   "name": "BMP60CAMN04 CAMISA DEMI AZUL 1.jpg"
+  },
+  "BM-3792|BMP60RELN00": {
+   "id": "1DTvr_n0iKC7Jn-ME8nSIMtWbveiXgvh2",
+   "modified": "2026-03-13T14:54:48.000Z",
+   "name": "BMP60RELN00 REMERA VERA BLANCO 1.jpg"
+  },
+  "BM-3794|BMP61REMN19": {
+   "id": "1R1H6spLvEACdj3lUoD3gUHLClx0EjJRY",
+   "modified": "2026-03-11T19:18:04.000Z",
+   "name": "BMP61REMN19 REMERA BITE ME CRUDO 1.jpg"
+  },
+  "BM-3795|BMP61REMN20": {
+   "id": "1qn59iohARVY2u-qu6L1MY_jREKU29O-X",
+   "modified": "2026-03-11T19:00:50.000Z",
+   "name": "BMP61REMN20 REMERA JEALOUS ROSA 1.jpg"
+  },
+  "BM-1462|BMP52BUZN00": {
+   "id": "1YBZn8OyNNlKlY23wLP6p98Oe_Csxa26k",
+   "modified": "2026-03-18T14:49:26.000Z",
+   "name": "BMP52BUZN00 BUZO POLO HOMBRE MARRON 1.jpg"
+  },
+  "B-2196|BHP50BABC10": {
+   "id": "15PTkS04tnmSw4n6BvFYxOnl0gpX8h665",
+   "modified": "2026-03-09T18:12:29.000Z",
+   "name": "BHP50BABC10 BABUCHA THOMAS NEGRO 1.jpg"
+  },
+  "B-31586|BHP61REMN60": {
+   "id": "1Va3Lx0bmo_6l2MbNKZEnvll4xXYe1nGp",
+   "modified": "2026-03-25T14:08:08.000Z",
+   "name": "BHP61REMN60 REMERA OIL 1.jpg"
+  },
+  "B-31587|BHP61REMN61": {
+   "id": "1Oimxfu_cGUOBeX1DOVdB01gnoCbuSyQc",
+   "modified": "2026-03-20T17:44:59.000Z",
+   "name": "BHP61REMN61 REMERA TYPO 1.jpg"
+  },
+  "B-1869|BHP62BUCN01": {
+   "id": "1liULngziv-le2g6S_N7O3iaH9etFC5dS",
+   "modified": "2026-04-16T16:46:59.253Z",
+   "name": "BHP62BUCN01 BUZO RODEO VIOLETA 1.jpg"
+  },
+  "BM-3800|BMP50REMC25": {
+   "id": "1bYOuuxw2KX-gkHdsZPyjwZUJz_-ixS2e",
+   "modified": "2026-03-16T11:20:59.000Z",
+   "name": "BMP50REMC25 REMERA PIMA VIOLETA 1.jpg"
+  },
+  "B-31590|BHP50REMC21": {
+   "id": "1cYl4QfIvZS-EJxRmFkynx-Q8Rr6dTVSA",
+   "modified": "2026-04-21T15:28:26.992Z",
+   "name": "BHP50REMC21 REMERA FIT BLANCO 1.webp"
+  },
+  "B-1247|BHP60DENN14": {
+   "id": "1dTzYZkaUS2TRQZOZiG-dpTFACo9gBHNk",
+   "modified": "2026-03-26T14:26:15.739Z",
+   "name": "BHP60DENN14 DENIM JAMES 1.jpg"
+  },
+  "B-1246|BHP60DENN15": {
+   "id": "1DlguRMRceR7FpBY4lvkxg-FHvkvaiqCi",
+   "modified": "2026-04-30T15:23:14.000Z",
+   "name": "BHP60DENN15 JEAN JACK 1.jpg"
+  },
+  "B-7389|BHP60PANN13": {
+   "id": "1RVXSO0XzXAowcxr3HZfvO7ERsnsDUwl8",
+   "modified": "2026-04-10T16:00:11.000Z",
+   "name": "BHP60PANN13 PANTALON IDRIS GRIS FRENTE 1.jpg"
+  },
+  "BM-0437|BMP50DENC28": {
+   "id": "1OH_0NfjXlQAouxrUQVkguubuH69hZXk4",
+   "modified": "2026-04-30T09:21:18.000Z",
+   "name": "BMP50DENC28 JEAN TAYLOR 1.jpg"
+  },
+  "BM-0439|BMP50DENC29": {
+   "id": "1J54p9UbRNWYGzxn_dFT8Z7uRHgnX6P-i",
+   "modified": "2026-04-08T19:52:01.000Z",
+   "name": "BMP50DENC29 DENIM BRIE 1.jpg"
+  },
+  "H-1556|HHP60BUCN08": {
+   "id": "1QDwX6BbTJzNFQHC-YnLtqU1QTxfbHlvP",
+   "modified": "2026-04-15T18:28:18.000Z",
+   "name": "HHP60BUCN08 BUZO ETHAN 1.jpg"
+  },
+  "H-30426|HHP61REMN44": {
+   "id": "1UCySTQYsvUKf_Vne3PUP3CT4P5Av7oU7",
+   "modified": "2026-04-15T18:35:20.000Z",
+   "name": "HHP61REMN44 REMERA KARIM 1.jpg"
+  },
+  "BM-0441|BMP60DENC31": {
+   "id": "1XD3hhFlzAAfheeTx4MJajbDsl9hRtn10",
+   "modified": "2026-05-22T19:55:59.000Z",
+   "name": "bmp60denc31 JEAN DAKOTA 1.jpg"
+  },
+  "BM-0443|BMP60DENN12": {
+   "id": "1nbGjU-CinsEyWJgcIfZqqEd7Az53rxnH",
+   "modified": "2026-04-30T09:24:52.000Z",
+   "name": "BMP60DENN12 JEAN JANET 1.jpg"
+  },
+  "BM-3804|BMP60RELN02": {
+   "id": "1B2sv-ns7NvrXVw-LpVI2dHEqR2-XKBmo",
+   "modified": "2026-03-25T14:36:31.000Z",
+   "name": "BMP60RELN02 REMERA ML BUTTONS BLANCO 1.jpg"
+  },
+  "BM-3803|BMP61RELN02": {
+   "id": "1ty9BG8lHZCR1oSVe0NHzrj-4styxvi92",
+   "modified": "2026-04-08T18:05:26.000Z",
+   "name": "BMP61RELN02 remera barroco cuadros.jpg"
+  },
+  "BM-8083|BMP61VESN00": {
+   "id": "1vihu47Z03tNh_JCN5_IrJuj2EMiVYJ_A",
+   "modified": "2026-04-09T13:21:37.000Z",
+   "name": "BMP61VESN00 VESTIDO BARROCO FLORES 1.jpg"
+  },
+  "BM-3793|BMP60RELN01": {
+   "id": "1R7eUVm8oyxXqMDnjvXedApGxAn5fIEvz",
+   "modified": "2026-03-17T11:42:36.135Z",
+   "name": "BMP60RELN01 REMERA ZURI NEGRO 1.jpg"
+  },
+  "BM-3805|BMP61REMN22": {
+   "id": "1BWY3Ej9e8-j170hhV0DPBQPCJ58six5O",
+   "modified": "2026-03-25T15:24:02.000Z",
+   "name": "BMP61REMN22 REMERA NEVER LOOK BACK NEGRO 1.jpg"
+  },
+  "B-1873|BHP50BUZC07": {
+   "id": "1OJCSdeK17QEb3_57adhfGp5_l7bGPOfQ",
+   "modified": "2026-03-25T12:24:42.000Z",
+   "name": "BHP50BUZC07 BUZO CREW NEGRO 1.jpg"
+  },
+  "B-1872|BHP61BUCN06": {
+   "id": "1fq6Heg9b8iykph8uGHJ2FIzn5Kxw4vfm",
+   "modified": "2026-05-14T15:15:54.000Z",
+   "name": "BHP61BUCN06 HOOD MIRAGE FRENTE.jpg"
+  },
+  "B-1871|BHP61BUZN06": {
+   "id": "1St1sWn9eJmdhjRjiwpRpJ_bw-kVsuiII",
+   "modified": "2026-05-04T12:47:14.379Z",
+   "name": "BHP61BUZN06 BUZO MIRAGE CRUDO 1.jpg"
+  },
+  "B-31594|BHP61RELN00": {
+   "id": "158MZappy1wPDmeVD1shj0-E7iuUKXdi3",
+   "modified": "2026-03-18T19:29:42.000Z",
+   "name": "BHP61RELN00 REMERA ML NORTH 1.jpg"
+  },
+  "B-31591|BHP60REMC24": {
+   "id": "1fQiTUxYdkUwMnmxBVjLnWBbaKJBR60sR",
+   "modified": "2026-03-18T18:21:27.000Z",
+   "name": "BHP60REMC24 REMERA PHILL AZUL 1.jpg"
+  },
+  "B-31593|BHP60REMC25": {
+   "id": "1PZjdhUTLCB65uZsH-xuLFcZLZxaDgIYm",
+   "modified": "2026-04-15T13:18:37.076Z",
+   "name": "BHP60REMC25 REMERA SAM AZUL 3 1.jpg"
+  },
+  "B-31599|BHP61RELN01": {
+   "id": "1rnXrqKcJbq2BwH2m8l9nhgWegfLDlO-V",
+   "modified": "2026-05-06T16:06:59.000Z",
+   "name": "bhp61reln01 REMERA BLACKLIST BLANCO 1.jpg"
+  },
+  "B-31595|BHP61REMN64": {
+   "id": "1BREtlcwgnjSKp3gh1MWHOJ6HlndqzXRr",
+   "modified": "2026-04-08T19:25:06.000Z",
+   "name": "BHP61REMN64 REMERA ABSTRACT CRUDO 1.jpg"
+  },
+  "BM-3806|BMP60MUSN08": {
+   "id": "1Zl1PuBAC1NVLudHg2hUP5SYbNatXi96H",
+   "modified": "2026-04-09T13:02:47.000Z",
+   "name": "BMP60MUSN08 MUSCULOSA VIVIANNE NEGRO 1.jpg"
+  },
+  "BM-3811|BMP61REMN23": {
+   "id": "10eTZk6ZRJgfEOFP-VSZU1qpArOBcg37W",
+   "modified": "2026-03-25T18:40:12.000Z",
+   "name": "BMP61REMN23 REMERA BRITNEY NEGRO 1.jpg"
+  },
+  "BM-0446|BMP60DENN14": {
+   "id": "1uJ65up1Pgv9KgNoZKZ6GT72FFevk2bRe",
+   "modified": "2026-04-30T01:21:58.000Z",
+   "name": "BMP60DENN14 JEAN ADDISON 1.jpg"
+  },
+  "BM-3809|BMP61REMN24": {
+   "id": "1H1CioSd1M4lgUDbuZWK2L0tUsnBYzXVv",
+   "modified": "2026-03-26T12:31:56.000Z",
+   "name": "BMP61REMN24 REMERA TRUE LOVE ROSA 1.jpg"
+  },
+  "B-1252|BHP50DENC36": {
+   "id": "1OtTeKCgrPCv1bnYccY8bI8k1wq-9SjwA",
+   "modified": "2026-05-13T15:22:30.514Z",
+   "name": "BHP50DENC36 PANTALON BENJA NEGRO FRENTE.png"
+  },
+  "B-31602|BHP60CHOC01": {
+   "id": "1T7GTM8VUxiaCcjL3Mg3dN73rvKancKOU",
+   "modified": "2026-05-04T14:16:37.000Z",
+   "name": "BHP60CHOC01 CHOMBA STEVEN GRIS FRENTE.jpg"
+  },
+  "B-1251|BHP60DENC38": {
+   "id": "1wJEcmW6V3WfZ0aFF7USTRsfQpIbiH4g_",
+   "modified": "2026-05-14T14:35:18.000Z",
+   "name": "BHP60DENC38 JEAN CATO FRENTE.png"
+  },
+  "B-31606|BHP60REMN26": {
+   "id": "1hCi0B8Wx63CCcYLIeaVmjaQALiVN0400",
+   "modified": "2026-05-04T12:36:14.000Z",
+   "name": "BHP60REMN26 REMERA PETER MARRON 1.jpg"
+  },
+  "B-31604|BHP61REMN68": {
+   "id": "1OXWMctAi4RLhFY4c8TZ44eARIP44Z_ue",
+   "modified": "2026-04-29T14:53:32.000Z",
+   "name": "BHP61REMN68 REMERA BUILDER NEGRA FRENTE.jpg"
+  },
+  "B-31605|BHP61REMN69": {
+   "id": "1msnFadfwDMxvmRtWiqnZFmLTJD2RXPIJ",
+   "modified": "2026-04-09T12:54:44.000Z",
+   "name": "BHP61REMN69 REMERA BARROCO FLORES 1.jpg"
+  },
+  "BM-4114|BMP60CAMN05": {
+   "id": "1Mw0Zfkaia7qI3NYbhN91iFZXMjGFCGGT",
+   "modified": "2026-05-21T17:53:20.000Z",
+   "name": "BMP60CAMN05 CAMISA ZEPPELIN BLANCO 1.jpg"
+  },
+  "BM-4116|BMP60CAMN06": {
+   "id": "1LHaEOYz2f2qpBExwGIYs7l6RP-4OzilO",
+   "modified": "2026-05-26T15:56:16.000Z",
+   "name": "BMP60CAMN06 CAMISA HAZEL NEGRO 1.jpg"
+  },
+  "BM-8085|BMP60FALN01": {
+   "id": "1UqcP1Pc4T4nGWoW8PyYWaguUkv8brIdn",
+   "modified": "2026-05-06T14:48:12.000Z",
+   "name": "bmp60faln01 falda sheryl 2 portada.jpg"
+  },
+  "BM-8086|BMP60FALN02": {
+   "id": "1_dqJluJW0QyBlF6gmMVqLnaF_TKl1Y1D",
+   "modified": "2026-04-30T00:32:00.000Z",
+   "name": "BMP60FALN02 FALDA RUGGED MARRON 1.jpg"
+  },
+  "BM-8084|BMP60FALN04": {
+   "id": "1DIT55wAkpTM47_DwpHAp47TB7SJFt913",
+   "modified": "2026-05-04T14:57:09.000Z",
+   "name": "BMP60FALN04 FALDA MIUCCIA 1.jpg"
+  },
+  "BM-3823|BMP60MUSN10": {
+   "id": "1QuciTBqREeJZ6swip2UZOmYUrBsWC7rM",
+   "modified": "2026-04-30T01:09:46.000Z",
+   "name": "BMP60MUSN10 REMERA RUGGED NEGRO 1.jpg"
+  },
+  "BM-3814|BMP60RELN03": {
+   "id": "1SRqOuDvn0vrWHwgjCoWN-q4k05RkRwA1",
+   "modified": "2026-03-30T13:11:22.000Z",
+   "name": "BMP60RELN03 REMERA ML NYX BLANCA 1.jpg"
+  },
+  "BM-3822|BMP61REMN25": {
+   "id": "1DTBoKEp9sJpW8sJxFGwjWqQXxevwEZ5Z",
+   "modified": "2026-05-21T15:04:06.000Z",
+   "name": "BMP61REMN25 REMERA MC BARROCO CUADROS 1.jpg"
+  },
+  "BM-3816|BMP62REMN25": {
+   "id": "1x2b15nm9ddqadaqHcSWwgRlNiTOHMzT9",
+   "modified": "2026-05-26T18:49:42.000Z",
+   "name": "BMP62REMN25 REMERA RESISTANCE NEGRA 1.jpg"
+  },
+  "B-1875|BHP60BUZC08": {
+   "id": "1Od_s3q37lBhSsYlJ7dai9uRsq9bwnKpu",
+   "modified": "2026-05-04T13:08:57.000Z",
+   "name": "BHP60BUZC08 BUZO JASON NEGRO DETALLE.jpg"
+  },
+  "B-2198|BHP60PANN14": {
+   "id": "1r2nqQ7tRhw1cUy-Tvk-Gr1Nk3nQT5IhY",
+   "modified": "2026-04-29T18:05:55.000Z",
+   "name": "BHP60PANN14 BABUCHA TIZIANO AZUL FRENTE.jpg"
+  },
+  "BM-3825|BMP50BODN02": {
+   "id": "11add2v6yDbgDzwQcktIHIR1td0AmPUbG",
+   "modified": "2026-04-30T09:26:52.000Z",
+   "name": "BMP50BODN02 BODY KYLIE 1.jpg"
+  },
+  "BM-3818|BMP50REMC33": {
+   "id": "1Ei6w8RITPlOZ4e8R8vsTT65lDwuc12Uy",
+   "modified": "2026-04-15T12:37:47.000Z",
+   "name": "BMP50REMC33 REMERA SOPHIE AZUL MARINO 1.jpg"
+  },
+  "BM-3827|BMP60REMC25": {
+   "id": "1vN24aOfEiZs8g32G70LdfGSs9McBkqZg",
+   "modified": "2026-05-04T12:58:22.000Z",
+   "name": "BMP60REMC25 REMERA UMA AZUL 1.jpg"
+  },
+  "BM-3815|BMP60REMN10": {
+   "id": "1DCwW2aGsUw2I1vdQYNv6rso-ztUKTiOY",
+   "modified": "2026-04-30T09:17:26.000Z",
+   "name": "BMP60REMN10 REMERA LILI 1.jpg"
+  },
+  "BM-3826|BMP61REMN26": {
+   "id": "1ySg4BDXA2UzZsncN6icT1Q6gjP8PR8Cl",
+   "modified": "2026-05-26T11:48:41.000Z",
+   "name": "BMP61REMN26 REMERA LOVELAND NEGRO 1.jpg"
+  },
+  "BM-1470|BMP50BUCC08": {
+   "id": "1z8Aanvz2RkIxp8s2sX67rUAqiruUqBY4",
+   "modified": "2026-04-29T15:09:47.000Z",
+   "name": "BMP50BUCC08 HOOD BERTHA NEGRO FRENTE.jpg"
+  },
+  "B-2197|BHP61BABN01": {
+   "id": "1389W41U-H7rstErduJG5Ffloy4Cub0Jv",
+   "modified": "2026-05-14T15:10:57.000Z",
+   "name": "BHP61BABN01 BABUCHA MIRAGE FRENTE.jpg"
+  },
+  "B-2200|BHP61BABN02": {
+   "id": "1xqhJh3mFSSf98BH9wut1oy5ff21haL4y",
+   "modified": "2026-05-12T10:34:40.000Z",
+   "name": "BHP61BABN02 BABUCHA SPIRIT AZUL FRENTE.png"
+  },
+  "B-31609|BHP61REMN70": {
+   "id": "101AqM4AZczCuQR2T3b37xgEVKUOxdmF4",
+   "modified": "2026-05-21T19:24:43.000Z",
+   "name": "BHP61REMN70 REMERA ALOFT VERDE 1.jpg"
+  },
+  "B-31611|BHP61REMN71": {
+   "id": "1PjI_oNQ0foefIqKNuzikUhAlu1qbF1q6",
+   "modified": "2026-05-21T19:37:22.000Z",
+   "name": "BHP61REMN71 REMERA FLAVOR AZUL 1.jpg"
+  },
+  "B-31612|BHP61REMN72": {
+   "id": "1_edND_n3ELFh4p84pWSQP3NS0XmGQ9pu",
+   "modified": "2026-04-29T18:28:56.000Z",
+   "name": "BHP61REMN72 REMERA LOCAL AZUL FRENTE.jpg"
+  },
+  "B-31615|BHP61REMN75": {
+   "id": "1mi5AotrKvNq4bY3kPFR6xnxgG41eeSdi",
+   "modified": "2026-05-13T10:25:12.000Z",
+   "name": "BHP61REMN75 REMERA JARVIS NEGRO FRENTE.png"
+  },
+  "BM-3828|BMP50RSMN02": {
+   "id": "1FSI-wUAtDJAJblWPqokPDlpsk7MreHFT",
+   "modified": "2026-05-05T14:38:48.000Z",
+   "name": "BMP50RSMN02 REMERA MEGAN VIOLETA 1.jpg"
+  },
+  "BM-1471|BMP60BUZC07": {
+   "id": "17_4vCIrNvOWRxZ5EHhupeJ-osJ9RhrKw",
+   "modified": "2026-04-30T08:52:56.000Z",
+   "name": "BMP60BUZC07 BUZO CLOEY MARRON 1.jpg"
+  },
+  "BM-3810|BMP60RELN04": {
+   "id": "1GGAF1YCkUQre6WaIDk4zjour1xnFnWLS",
+   "modified": "2026-05-26T14:01:13.000Z",
+   "name": "bmp60reln04 REMERA CAYETANA GRIS 1.jpg"
+  },
+  "BM-8088|BMP60VESN01": {
+   "id": "1d-djEXLUQEyuLbrQk7EpS7Tfu_67cWjU",
+   "modified": "2026-05-20T17:59:11.000Z",
+   "name": "BMP60VESN01 VESTIDO LUCRECIA 1.jpg"
+  },
+  "BM-3829|BMP61REMN27": {
+   "id": "1Dn7sSrZ1l9moIOGGOWZvK9bQDeZucT1f",
+   "modified": "2026-05-21T18:58:35.000Z",
+   "name": "BMP61REMN27 REMERA WHATEVER BLANCO 1.jpg"
+  },
+  "BM-3830|BMP61REMN28": {
+   "id": "1XPtzpLeLkrC_EkQMaBmSXXRJDe4H_VQU",
+   "modified": "2026-05-20T19:10:07.000Z",
+   "name": "BMP61REMN28 REMERA REV OR DIE NEGRA 1.jpg"
+  },
+  "B-31614|BHP61REMN74": {
+   "id": "1oSDdeupRgyOFl--3zTBp8Zzu_WguxqP4",
+   "modified": "2026-05-13T10:06:10.000Z",
+   "name": "BHP61REMN74 REMERA DEPT AZUL FRENTE.png"
+  },
+  "BM-4117|BMP60REMC26": {
+   "id": "1KveA-4JyCQ6zo55M1t1hcQ9xmnWY4EIR",
+   "modified": "2026-05-21T18:37:13.000Z",
+   "name": "BMP60REMC26 REMERA CORA BLANCA 1.jpg"
+  },
+  "H-30428|HHP61REMN45": {
+   "id": "1KEq2Yov2LzpD2ohU6xjmixEvhIYWqEv6",
+   "modified": "2026-05-12T10:34:32.000Z",
+   "name": "HHP61REMN45 REMERA ECHOES FRENTE.png"
+  },
+  "B-31625|BHP61REMN80": {
+   "id": "120rtVd3Xs9SHlhjuPrK7S0TX3QO9ux5q",
+   "modified": "2026-05-20T15:31:09.000Z",
+   "name": "BHP61REMN80 REMERA ESPRESSO 1.jpg"
+  },
+  "BM-8091|BMP60VESC02": {
+   "id": "1wdzHQymq3lc11nXrDWZKyBRgVBGRKL2R",
+   "modified": "2026-05-28T13:40:49.294Z",
+   "name": "BMP60VESC02 VESTIDO MIDI HOPE NEGRO 1.jpg"
+  },
+  "BM-8093|BMP60VESN03": {
+   "id": "1W_eFxB2-aCrYVtOuk3qPxocrjtK0WPDR",
+   "modified": "2026-05-22T18:48:29.000Z",
+   "name": "BMP60VESN03 VESITDO NAOMI 1.jpg"
+  },
+  "BM-3841|BMP61REMN30": {
+   "id": "1S_lK-qitH2hVhQU2YQFv7UUCDTjsmQMq",
+   "modified": "2026-05-14T17:37:17.000Z",
+   "name": "BMP61REMN30 REMERA HELMET FRENTE.png"
+  },
+  "BM-3857|BMP60REMC28": {
+   "id": "10cz26_BVFlPCLLIsUAMopQP6CmwOSpwk",
+   "modified": "2026-05-22T19:24:40.038Z",
+   "name": "BMP60REMC28 REMERA DELFI 1.jpg"
+  },
+  "B-HERBARIO|BBP60ABRN00": {
+   "id": "11vEgvwuq4BQBTxFMX69f9wxGYTxC2jkJ",
+   "modified": "2026-05-07T12:39:17.000Z",
+   "name": "BBP60ABRN00 SACO HERBARIO 1.jpg"
+  },
+  "B-WALTER|BBP60FETN01": {
+   "id": "1N_X6mcCxyXZFBX1Zejdlq01HuODAZWwk",
+   "modified": "2026-05-06T15:01:06.000Z",
+   "name": "BBP60FETN01 CAMPERA WALTER AZUL 1.jpg"
+  },
+  "B-ACEBO|BBP60FETN02": {
+   "id": "1OwFgOaJ2aAvQq2nY12GhQuDUJ4eKqN7s",
+   "modified": "2026-05-07T14:51:46.000Z",
+   "name": "BBP60FETN02 CAMPERA ACEBO BEIGE 1.jpg"
+  },
+  "B-ALBOR|BBP60FETN03": {
+   "id": "1JCvZh0tX6_z7ivhJzPMiPThPSMBGKzxM",
+   "modified": "2026-05-07T12:51:34.000Z",
+   "name": "BBP60FETN03 CAMPERA ALBOR LIGHT COFFEE 1.jpg"
+  },
+  "B-BERNINI|BBP60FETN04": {
+   "id": "1lElGFfWBdK-rTn1alZIOG303weX0baMh",
+   "modified": "2026-05-07T15:35:42.000Z",
+   "name": "BBP60FETN04 CAMPERA BERNINI BEIGE  0 1.jpg"
+  },
+  "B-FREEMAN|BBP61ABRN00": {
+   "id": "1oRwSmMrBj7_jwNtppVxBeF8K7r9usCfR",
+   "modified": "2026-05-06T13:34:51.000Z",
+   "name": "BBP61ABRN00 TAPADO FREEMAN CUADROS 1.jpg"
+  },
+  "B-SIBO|BBP61FETN00": {
+   "id": "160313nzI45fBibw3nGMUO0TZ54_VgoJ5",
+   "modified": "2026-04-16T14:24:22.000Z",
+   "name": "BBP61FETN00 CAMPERA SIBO AZUL 1.jpg"
+  },
+  "B-SENECIO|BBP60ABRN01": {
+   "id": "1HOOen4-E41o3vMPwiim8u1XeSm0ej6f6",
+   "modified": "2026-04-14T08:37:12.000Z",
+   "name": "BBP60ABRN01 TAPADO SENECIO NEGRO 1 Y 2.jpg"
+  },
+  "B-DURERO|BBP61ABRN01": {
+   "id": "18FtafTiaV8Hd_y5LvM3nh-PKX-f_DhmE",
+   "modified": "2026-04-15T15:47:42.000Z",
+   "name": "BBP61ABRN01 TAPADO DURERO MARRON 0 1.jpg"
+  },
+  "B-BESSY|BBP60FETN05": {
+   "id": "1Figg76amsgHq9d6JcP177tLlyZMcpVLl",
+   "modified": "2026-05-07T15:26:34.314Z",
+   "name": "BBP60FETN05 PILOTO BESSY 0 6.jpg"
+  },
+  "BW-VERDENA|BWP60ABRN00": {
+   "id": "1ixn3J5fD_YdY8Bobjy_tKlq1ke4cz0NK",
+   "modified": "2026-05-06T14:34:02.000Z",
+   "name": "BWP60ABRN00 PILOTO VERDENA BEIGE 1.jpg"
+  },
+  "BW-UMBRA|BWP61ABRN00": {
+   "id": "1hXLgWPCZreoZCHG-cptMkHv3ZbPF9k7j",
+   "modified": "2026-05-06T13:37:20.000Z",
+   "name": "BWP61ABRN00 TAPADO UMBRA 1.jpg"
+  },
+  "BW-NUBIA|BWP60ABRN01": {
+   "id": "1OnO1SfamNFVP3GSz1SFIwYayc2CT3i19",
+   "modified": "2026-05-04T08:00:32.000Z",
+   "name": "BWP60ABRN01 TAPADO NUBIA GRIS 1.jpg"
+  },
+  "BM-MARGARITA|BWP61FETN00": {
+   "id": "1B6EeTw7kXrK3zvlM5eNEA3DjDWy51qT9",
+   "modified": "2026-04-29T23:59:48.000Z",
+   "name": "BWP61FETN00 CAMPERA MARGARITA MARRON 1.jpg"
+  },
+  "TRI-W01|BWP61SWEN02": {
+   "id": "1MUHt586B1GCpDjCo2NlKW9TEdf36AJWA",
+   "modified": "2026-05-15T12:56:24.000Z",
+   "name": "BWP61SWEN02 GRIS CON MARRON Y BEIGE 1.png"
+  },
+  "TRI-W02|BWP61SWEN03": {
+   "id": "1ACOnxNKKzmge3PfG-acYajAdcOBxHkc8",
+   "modified": "2026-05-15T15:11:18.000Z",
+   "name": "BWP61SWEN03 ROSA CON BORDO 1.png"
+  },
+  "TRI-W05|BWP60SWEN12": {
+   "id": "1EH1nTZ8dF9Y6dDVeYGNsQd9WO92IPhBS",
+   "modified": "2026-05-15T13:29:40.000Z",
+   "name": "BWP60SWEN12 MARRON 1.png"
+  },
+  "MGP0761|BWP60SWEN03": {
+   "id": "15vhAVigDngUx1Mzd3_VoxS-g-bROcASR",
+   "modified": "2026-05-15T15:11:18.000Z",
+   "name": "BWP60SWEN03 VIOLETA 1.png"
+  },
+  "ZSR7166|BWP61SWEN00": {
+   "id": "1CpyUn0t3DIO7_-PjSMAySsXnq1fnXYbJ",
+   "modified": "2026-05-15T13:15:10.000Z",
+   "name": "BWP61SWEN00 AZUL Y BURGUNDY 1.png"
+  },
+  "#7|BWP60SWEN04": {
+   "id": "1u5GdURROTh351BX0P_TGkUE3rpJvCXMa",
+   "modified": "2026-05-15T14:26:26.000Z",
+   "name": "BWP60SWEN04 NEGRO 1.png"
+  },
+  "HLD242553|BWP61SWEN01": {
+   "id": "1BiX0a3hlCy-fE4lh-dL4BJ5vAIUF0gCX",
+   "modified": "2026-05-15T15:04:42.000Z",
+   "name": "BWP61SWEN01 NEGRO CON OFF WHITE 1.png"
+  },
+  "#1|BWP60SWEN05": {
+   "id": "1Blg6M7QA24k-YdnbReV5N1SGaDprbfM8",
+   "modified": "2026-05-15T14:56:32.000Z",
+   "name": "BWP60SWEN05 GRIS 1.png"
+  },
+  "#11|BWP60SWEN06": {
+   "id": "1jJ-1jIV0ovtjph1QF92QgidbHmfQJyWv",
+   "modified": "2026-05-15T15:23:56.000Z",
+   "name": "BWP60SWEN06 NEGRO 1.png"
+  },
+  "#6|BWP60SWEN07": {
+   "id": "1KSAAke-Gfs7sFzZX1y-HD5T8DFg6wxHS",
+   "modified": "2026-05-15T14:12:36.000Z",
+   "name": "BWP60SWEN07 ROJO 1.png"
+  },
+  "#5|BWP60SWEN08": {
+   "id": "1soTPPbWPCrUjxkx_NHObZtJYqkWD2XYS",
+   "modified": "2026-05-15T15:11:18.000Z",
+   "name": "BWP60SWEN08 BORDO 1.png"
+  },
+  "HL25K276|BWP60SWEN09": {
+   "id": "13KTvkif_O1j2QCvAy9xXRWLxMRUJYHAk",
+   "modified": "2026-05-15T15:11:18.000Z",
+   "name": "BWP60SWEN09 TAUPE 1.png"
+  },
+  "ZS11353|BWP60SWEN10": {
+   "id": "1n3BjsgrYZ2Su4UVD9eBl7qCV0551R8AV",
+   "modified": "2026-05-15T15:19:32.000Z",
+   "name": "BWP60SWEN10 VERDE 1.png"
+  },
+  "ZS113521|BWP60SWEN11": {
+   "id": "14Ibw-uoh9DKBqQoeAAkw4LDOrEm3f_m2",
+   "modified": "2026-05-15T13:40:26.000Z",
+   "name": "BWP60SWEN11 AZUL 1.png"
+  },
+  "131884555.0|BWP60SWEN00": {
+   "id": "1zfHJ2eznfvNLjDW6M7N0tqp-Ohikq3YR",
+   "modified": "2026-05-15T13:29:36.000Z",
+   "name": "BWP60SWEN00 VERDE 1.png"
+  },
+  "KRWZCW0943|BWP60SWEN01": {
+   "id": "1PDa_PlmyrZ0AR1lipq0ISPc27OHu09T_",
+   "modified": "2026-05-15T14:26:30.000Z",
+   "name": "BWP60SWEN01 CRUDO 1.png"
+  },
+  "131554102.0|BWP60SWEN02": {
+   "id": "1nTtCz7dNo4-ZBHLsumw52JjRdJfI_Hvy",
+   "modified": "2026-05-15T14:59:49.000Z",
+   "name": "BWP60SWEN02 CHOCOLATE 1.png"
+  },
+  "ESP2604|BWP60FETN01": {
+   "id": "1J2Pg1jJbEKke8oShLPEQL2mvHdXF8zmU",
+   "modified": "2026-04-29T23:58:58.000Z",
+   "name": "BWP60FETN01 GAMULAN NEVA GRIS 1.jpg"
+  },
+  "BAT-FW2616|BWP60ABRN02": {
+   "id": "1WNEcsTXg1Hip3OCWfA1USzVpnnhoA5HZ",
+   "modified": "2026-05-04T08:03:44.000Z",
+   "name": "BWP60ABRN02 TAPADO NUBIA NEGRO 1.jpg"
+  }
+ }
+}
