@@ -298,9 +298,9 @@ function renderTicket(){
   const tEnt=avg(ent),tPen=avg(pen),tAll=avg(items);
   function brk(arr){const n=arr.filter(x=>origenNorm(x.origen)==='NACIONAL').length;const i=arr.filter(x=>origenNorm(x.origen)==='IMPORTADO').length;return '<span class="brk">Nac '+n+' · Imp '+i+'</span>';}
   document.getElementById('ticket-bar').innerHTML=
-    '<div class="ticket entregado"><span class="lbl">Ticket prom. Entregado</span><span class="num">'+fmt$(tEnt)+'</span><span class="sub">'+ent.length+' SKUs</span>'+brk(ent)+'</div>'+
-    '<div class="ticket pendiente"><span class="lbl">Ticket prom. Pendiente</span><span class="num">'+fmt$(tPen)+'</span><span class="sub">'+pen.length+' SKUs</span>'+brk(pen)+'</div>'+
-    '<div class="ticket"><span class="lbl">Ticket prom. Total</span><span class="num">'+fmt$(tAll)+'</span><span class="sub">'+items.length+' SKUs</span>'+brk(items)+'</div>';
+    '<div class="ticket entregado"><span class="lbl">Facturacipon prom. Entregado</span><span class="num">'+fmt$(tEnt)+'</span><span class="sub">'+ent.length+' SKUs</span>'+brk(ent)+'</div>'+
+    '<div class="ticket pendiente"><span class="lbl">Facturación prom. Pendiente</span><span class="num">'+fmt$(tPen)+'</span><span class="sub">'+pen.length+' SKUs</span>'+brk(pen)+'</div>'+
+    '<div class="ticket"><span class="lbl">Facturación prom. Total</span><span class="num">'+fmt$(tAll)+'</span><span class="sub">'+items.length+' SKUs</span>'+brk(items)+'</div>';
 }
 function renderGrouped(items){
   // Si filtro entregado solo: grid plano
