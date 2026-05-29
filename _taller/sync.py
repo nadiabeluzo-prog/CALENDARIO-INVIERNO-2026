@@ -55,23 +55,40 @@ def main(xlsx_path):
     wb = openpyxl.load_workbook(xlsx_path, data_only=True)
     ws = wb['01-MAESTRO MATERIALES INV']
 
-    # column indices (0-based) — actualizado 2026-04-28 con columna ORIGEN nueva
-    C_ORIGEN = 1
-    C_MARCA = 2
-    C_COD = 4
-    C_CAT = 6
-    C_RUBRO = 7
-    C_BOTONERA = 8
-    C_DESC = 9
-    C_MES_ING = 10
-    C_MES = 11
-    C_SEMANA = 16
-    C_STATUS = 17
-    C_NOMBRE = 23
-    C_COLOR_BAS = 25
-    C_UNID = 28
-    C_CORTADO = 34
-    C_COSTO_OB = 45
+    # Header-based column lookup (robusto a cambios de orden de columnas)
+    header_row = next(ws.iter_rows(min_row=1, max_row=1, values_only=True))
+    def _norm(s):
+        return (str(s or '').strip().upper()
+                .replace('Á','A').replace('É','E').replace('Í','I').replace('Ó','O').replace('Ú','U').replace('Ñ','N'))
+    headers = {_norm(c): i for i, c in enumerate(header_row) if c}
+    def find_col(*candidates, required=True):
+        for name in candidates:
+            key = _norm(name)
+            if key in headers:
+                return headers[key]
+            for k, idx in headers.items():
+                if key in k:
+                    return idx
+        if required:
+            raise KeyError(f'Columna no encontrada en maestro: {candidates}. Headers: {list(headers)}')
+        return None
+    C_ORIGEN  = find_col('ORIGEN')
+    C_MARCA   = find_col('MARCA')
+    C_COD     = find_col('COD')
+    C_CAT     = find_col('CATEGORIA PLAN','CATEGORIA')
+    C_RUBRO   = find_col('RUBRO')
+    C_BOTONERA= find_col('BOTONERA')
+    C_DESC    = find_col('DESCRIPCION A PRODUCCION','DESCRIPCION', required=False) or 9
+    C_MES_ING = find_col('MES INGRESO', required=False) or 10
+    C_MES     = find_col('MES INGRESO PRODUCCION')
+    C_SEMANA  = find_col('SEMANA DEL MES','SEMANA')
+    C_STATUS  = find_col('STATUS')
+    C_NOMBRE  = find_col('NOMBRE PRODUCTO','NOMBRE')
+    C_COLOR_BAS = find_col('COLOR BAS','COLOR')
+    C_UNID    = find_col('UNID PEDIDAS','UNID','UNIDADES PEDIDAS','UNIDADES')
+    C_CORTADO = find_col('CORTADO','UNID CORTADAS')
+    C_COSTO_OB= find_col('COSTO OB','COSTO OBJETIVO','COSTO')
+    print(f'[sync.py] Cols: ORIGEN={C_ORIGEN} MARCA={C_MARCA} COD={C_COD} NOMBRE={C_NOMBRE} MES={C_MES} STATUS={C_STATUS} UNID={C_UNID} CORTADO={C_CORTADO} COSTO={C_COSTO_OB}')
 
     by_cod = {}
     for r in ws.iter_rows(min_row=2, values_only=True):
