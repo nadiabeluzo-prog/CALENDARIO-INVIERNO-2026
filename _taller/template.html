@@ -212,8 +212,10 @@ footer{max-width:1640px;margin:60px auto 0;padding:32px;color:var(--ink-mute);fo
 <script>
 const PRODUCTOS = __PRODUCTOS__;
 const COLOR_HEX = __COLORS__;
-const MES_ORDER = ['FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO'];
-const MES_LABEL = {'FEBRERO':'Febrero','MARZO':'Marzo','ABRIL':'Abril','MAYO':'Mayo','JUNIO':'Junio','JULIO':'Julio'};
+const MES_ORDER = ['FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO','A DEFINIR'];
+const MES_LABEL = {'FEBRERO':'Febrero','MARZO':'Marzo','ABRIL':'Abril','MAYO':'Mayo','JUNIO':'Junio','JULIO':'Julio','A DEFINIR':'A definir'};
+// Normalizar variantes que escribe el maestro a la clave canónica "A DEFINIR"
+for(const _p of PRODUCTOS){const _m=(_p.mes||'').trim().toUpperCase();if(_m && _m!=='' && /DEFINIR/.test(_m)) _p.mes='A DEFINIR';}
 const COUNTS={},UNITS={},PHOTOS={};
 for(const m of MES_ORDER){COUNTS[m]=0;UNITS[m]=0;PHOTOS[m]=0;}
 for(const p of PRODUCTOS){if(COUNTS[p.mes]!==undefined){COUNTS[p.mes]++;UNITS[p.mes]+=p.cant;if(p.foto)PHOTOS[p.mes]++;}}
@@ -294,13 +296,18 @@ function renderTicket(){
     .filter(p=>!q||(p.nombre+' '+p.cod+' '+p.color+' '+p.rubro+' '+p.marca).toLowerCase().includes(q));
   const ent=items.filter(p=>statusGroup(p.status)==='ENTREGADO');
   const pen=items.filter(p=>statusGroup(p.status)==='PENDIENTE');
-  function avg(arr){const w=arr.filter(x=>x.precio>0);if(w.length===0)return 0;return w.reduce((s,x)=>s+x.precio,0)/w.length;}
-  const tEnt=avg(ent),tPen=avg(pen),tAll=avg(items);
+  function unidades(x){return (x.cortado&&x.cortado>0)?x.cortado:(x.cant||0);}
+  function rev(arr){return arr.reduce((s,x)=>s+((x.precio||0)*unidades(x)),0);}
+  function units(arr){return arr.reduce((s,x)=>s+unidades(x),0);}
+  function avgP(arr){const w=arr.filter(x=>x.precio>0);if(w.length===0)return 0;return w.reduce((s,x)=>s+x.precio,0)/w.length;}
+  const tEnt=rev(ent),tPen=rev(pen),tAll=rev(items);
+  const uEnt=units(ent),uPen=units(pen),uAll=units(items);
+  const pEnt=avgP(ent),pPen=avgP(pen),pAll=avgP(items);
   function brk(arr){const n=arr.filter(x=>origenNorm(x.origen)==='NACIONAL').length;const i=arr.filter(x=>origenNorm(x.origen)==='IMPORTADO').length;return '<span class="brk">Nac '+n+' · Imp '+i+'</span>';}
   document.getElementById('ticket-bar').innerHTML=
-    '<div class="ticket entregado"><span class="lbl">Ticket prom. Entregado</span><span class="num">'+fmt$(tEnt)+'</span><span class="sub">'+ent.length+' SKUs</span>'+brk(ent)+'</div>'+
-    '<div class="ticket pendiente"><span class="lbl">Ticket prom. Pendiente</span><span class="num">'+fmt$(tPen)+'</span><span class="sub">'+pen.length+' SKUs</span>'+brk(pen)+'</div>'+
-    '<div class="ticket"><span class="lbl">Ticket prom. Total</span><span class="num">'+fmt$(tAll)+'</span><span class="sub">'+items.length+' SKUs</span>'+brk(items)+'</div>';
+    '<div class="ticket entregado"><span class="lbl">Facturación esperada · Entregado</span><span class="num">'+fmt$(tEnt)+'</span><span class="sub">Precio prom. '+fmt$(pEnt)+' · '+ent.length+' SKUs · '+uEnt.toLocaleString('es-AR')+' u.</span>'+brk(ent)+'</div>'+
+    '<div class="ticket pendiente"><span class="lbl">Facturación esperada · Pendiente</span><span class="num">'+fmt$(tPen)+'</span><span class="sub">Precio prom. '+fmt$(pPen)+' · '+pen.length+' SKUs · '+uPen.toLocaleString('es-AR')+' u.</span>'+brk(pen)+'</div>'+
+    '<div class="ticket"><span class="lbl">Facturación esperada · Total</span><span class="num">'+fmt$(tAll)+'</span><span class="sub">Precio prom. '+fmt$(pAll)+' · '+items.length+' SKUs · '+uAll.toLocaleString('es-AR')+' u.</span>'+brk(items)+'</div>';
 }
 function renderGrouped(items){
   // Si filtro entregado solo: grid plano
@@ -405,6 +412,14 @@ document.getElementById('origen-pills').addEventListener('click',e=>{
   currentOrigen=p.dataset.origen;
   updatePills(); render();
 });
-document.getElementById('q').addEventListener('input',e=>{currentSearch=e.target.value; render();});
+document.getElementById('q').addEventListener('input',e=>{currentSearch=e.target.value;render();});
+render();
+</script></body></html>
+ventListener('click',e=>{
+  const p=e.target.closest('.pill'); if(!p) return;
+  currentOrigen=p.dataset.origen;
+  updatePills(); render();
+});
+document.getElementById('q').addEventListener('input',e=>{currentSearch=e.target.value;render();});
 render();
 </script></body></html>
