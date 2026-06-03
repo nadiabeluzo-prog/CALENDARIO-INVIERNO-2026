@@ -674,7 +674,7 @@
   "color": "CELESTE, CRUDO, ROSA",
   "categoria": "PUNTO",
   "marca": "BATUK W",
-  "status": "PLANCHA",
+  "status": "ENTREGADO",
   "origen": "NACIONAL",
   "botonera": "H-HOOD RUST PREM",
   "semana": "1°",
@@ -693,7 +693,7 @@
   "color": "CELESTE, CRUDO, ROSA",
   "categoria": "PUNTO",
   "marca": "BATUK W",
-  "status": "PLANCHA",
+  "status": "ENTREGADO",
   "origen": "NACIONAL",
   "botonera": "H-HOOD RUST PREM",
   "semana": "1°",
@@ -826,7 +826,7 @@
   "color": "AZUL",
   "categoria": "PLANO",
   "marca": "BATUK W",
-  "status": "PLANCHA",
+  "status": "ENTREGADO",
   "origen": "NACIONAL",
   "botonera": "BW-CAMISA DENIM",
   "semana": "1°",
@@ -2859,7 +2859,7 @@
   "color": "AZUL, CRUDO, MARRON",
   "categoria": "PUNTO",
   "marca": "BATUK",
-  "status": "PLANCHA",
+  "status": "ENTREGADO",
   "origen": "NACIONAL",
   "botonera": "B-HOOD FRIS DIF",
   "semana": "1°",
@@ -2992,7 +2992,7 @@
   "color": "BEIGE, NEGRO",
   "categoria": "PUNTO",
   "marca": "BATUK W",
-  "status": "PLANCHA",
+  "status": "ENTREGADO",
   "origen": "NACIONAL",
   "botonera": "BW-REMERA DIF",
   "semana": "1°",
@@ -3391,7 +3391,7 @@
   "color": "BEIGE, VERDE",
   "categoria": "PUNTO",
   "marca": "BATUK",
-  "status": "PARA PLANCHA",
+  "status": "plancha",
   "origen": "NACIONAL",
   "botonera": "B-HOOD RUST PREM",
   "semana": "1°",
@@ -3505,7 +3505,7 @@
   "color": "AZUL",
   "categoria": "JEAN",
   "marca": "BATUK W",
-  "status": "PLANCHA",
+  "status": "entregaDO",
   "origen": "NACIONAL",
   "botonera": "BW-DENIM PREM",
   "semana": "1°",
@@ -3999,7 +3999,7 @@
   "color": "CRUDO, NEGRO, VIOLETA",
   "categoria": "PUNTO",
   "marca": "BATUK W",
-  "status": "PLANCHA",
+  "status": "entregaDO",
   "origen": "NACIONAL",
   "botonera": "BW-HOOD PUNTO",
   "semana": "1°",
@@ -4018,7 +4018,7 @@
   "color": "CRUDO, NEGRO, VIOLETA",
   "categoria": "PUNTO",
   "marca": "BATUK W",
-  "status": "PLANCHA",
+  "status": "entregaDO",
   "origen": "NACIONAL",
   "botonera": "BW-PANT PUNTO",
   "semana": "1°",
@@ -4132,7 +4132,7 @@
   "color": "CRUDO, NEGRO",
   "categoria": "PUNTO",
   "marca": "BATUK W",
-  "status": "PLANCHA",
+  "status": "entregaDO",
   "origen": "NACIONAL",
   "botonera": "BW-REMERA BASIC",
   "semana": "1°",
@@ -5063,7 +5063,7 @@
   "color": "BLANCO, NEGRO",
   "categoria": "PUNTO",
   "marca": "BATUK W",
-  "status": "PLANCHA",
+  "status": "entregaDO",
   "origen": "NACIONAL",
   "botonera": "BW-REMERA EST",
   "semana": "1°",
@@ -5728,7 +5728,7 @@
   "color": "CRUDO, NEGRO",
   "categoria": "PUNTO",
   "marca": "BATUK W",
-  "status": "PLANCHA",
+  "status": "entregaDO",
   "origen": "NACIONAL",
   "botonera": "BW-REMERA BASIC",
   "semana": "1°",
@@ -6308,7 +6308,7 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+justine+site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "A DEFINIR",
+  "MES INGRESO PRODUCCION": "JUNIO",
   "NOMBRE": "SOPHIE",
   "COD": "BM-3875",
   "cantidad": 300,
@@ -6327,7 +6327,7 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+sophie+site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "A DEFINIR",
+  "MES INGRESO PRODUCCION": "JULIO",
   "NOMBRE": "CORSET",
   "COD": "BM-3879",
   "cantidad": 300,
@@ -6403,7 +6403,7 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+buttons+site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "A DEFINIR",
+  "MES INGRESO PRODUCCION": "AGOSTO",
   "NOMBRE": "DARK",
   "COD": "BM-3861",
   "cantidad": 500,
@@ -6422,7 +6422,7 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+dark+site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "A DEFINIR",
+  "MES INGRESO PRODUCCION": "AGOSTO",
   "NOMBRE": "BERTHA",
   "COD": "BM-2214",
   "cantidad": 393,
@@ -6441,7 +6441,7 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+bertha+site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "A DEFINIR",
+  "MES INGRESO PRODUCCION": "JULIO",
   "NOMBRE": "BERTHA",
   "COD": "BM-1494",
   "cantidad": 610,
@@ -6460,7 +6460,7 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+bertha+site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "A DEFINIR",
+  "MES INGRESO PRODUCCION": "AGOSTO",
   "NOMBRE": "LAURIE",
   "COD": "BM-7281",
   "cantidad": 795,
@@ -6479,7 +6479,7 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+laurie+site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "",
+  "MES INGRESO PRODUCCION": "JULIO",
   "NOMBRE": "EMOTIONS",
   "COD": "B-31643",
   "cantidad": 300,
@@ -6488,7 +6488,7 @@
   "color": "",
   "categoria": "PUNTO",
   "marca": "BATUK",
-  "status": "",
+  "status": "EN PROGRAMACION",
   "origen": "NACIONAL",
   "botonera": "B-REMERA PREM",
   "semana": "",
@@ -6498,7 +6498,7 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+emotions+site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "",
+  "MES INGRESO PRODUCCION": "JULIO",
   "NOMBRE": "EMOTIONS",
   "COD": "B-31652",
   "cantidad": 300,
@@ -6507,7 +6507,7 @@
   "color": "",
   "categoria": "PUNTO",
   "marca": "BATUK",
-  "status": "",
+  "status": "EN PROGRAMACION",
   "origen": "NACIONAL",
   "botonera": "B-REMERA PREM",
   "semana": "",
@@ -6517,7 +6517,7 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+emotions+site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "",
+  "MES INGRESO PRODUCCION": "JUNIO",
   "NOMBRE": "DELFI",
   "COD": "BM-3876",
   "cantidad": 600,
@@ -6526,7 +6526,7 @@
   "color": "",
   "categoria": "PUNTO",
   "marca": "BATUK W",
-  "status": "",
+  "status": "EN PROGRAMACION",
   "origen": "NACIONAL",
   "botonera": "BW-REMERA BASIC",
   "semana": "",
@@ -6536,7 +6536,7 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+delfi+site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "",
+  "MES INGRESO PRODUCCION": "JULIO",
   "NOMBRE": "DELFI",
   "COD": "BM-3878",
   "cantidad": 600,
@@ -6545,7 +6545,7 @@
   "color": "",
   "categoria": "PUNTO",
   "marca": "BATUK W",
-  "status": "",
+  "status": "EN PROGRAMACION",
   "origen": "NACIONAL",
   "botonera": "BW-REMERA BASIC",
   "semana": "",
@@ -6555,7 +6555,7 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+delfi+site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "",
+  "MES INGRESO PRODUCCION": "JULIO",
   "NOMBRE": "FLOWERS",
   "COD": "BM-1490",
   "cantidad": 765,
@@ -6564,7 +6564,7 @@
   "color": "",
   "categoria": "PUNTO",
   "marca": "BATUK W",
-  "status": "",
+  "status": "PRIORIDAD",
   "origen": "NACIONAL",
   "botonera": "BW-HOOD FRIS PREM",
   "semana": "",
@@ -6574,7 +6574,7 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+flowers+site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "",
+  "MES INGRESO PRODUCCION": "JULIO",
   "NOMBRE": "FLOWERS",
   "COD": "BM-1491",
   "cantidad": 120,
@@ -6583,7 +6583,7 @@
   "color": "",
   "categoria": "PUNTO",
   "marca": "BATUK W",
-  "status": "",
+  "status": "PRIORIDAD",
   "origen": "NACIONAL",
   "botonera": "BW-HOOD FRIS PREM",
   "semana": "",
@@ -6593,7 +6593,7 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+flowers+site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "",
+  "MES INGRESO PRODUCCION": "JULIO",
   "NOMBRE": "MARGARITA",
   "COD": "BM-2211",
   "cantidad": 539,
@@ -6602,7 +6602,7 @@
   "color": "",
   "categoria": "PUNTO",
   "marca": "BATUK W",
-  "status": "",
+  "status": "PRIORIDAD",
   "origen": "NACIONAL",
   "botonera": "BW- PANT FRIS DIF",
   "semana": "",
@@ -6612,7 +6612,7 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+margarita+site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "",
+  "MES INGRESO PRODUCCION": "JULIO",
   "NOMBRE": "MARGARITA",
   "COD": "BM-2212",
   "cantidad": 130,
@@ -6621,7 +6621,7 @@
   "color": "",
   "categoria": "PUNTO",
   "marca": "BATUK W",
-  "status": "",
+  "status": "PRIORIDAD",
   "origen": "NACIONAL",
   "botonera": "BW-PANT FRIS DIF",
   "semana": "",
@@ -6631,7 +6631,7 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+margarita+site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "",
+  "MES INGRESO PRODUCCION": "AGOSTO",
   "NOMBRE": "ENZO",
   "COD": "B-1259",
   "cantidad": 1200,
@@ -6640,7 +6640,7 @@
   "color": "",
   "categoria": "PLANO",
   "marca": "BATUK",
-  "status": "",
+  "status": "PRIORIDAD",
   "origen": "NACIONAL",
   "botonera": "B-DENIM DIF",
   "semana": "",
@@ -6650,7 +6650,7 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+enzo+site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "",
+  "MES INGRESO PRODUCCION": "AGOSTO",
   "NOMBRE": "ROSE",
   "COD": "BM-0454",
   "cantidad": 1200,
@@ -6659,7 +6659,7 @@
   "color": "",
   "categoria": "PLANO",
   "marca": "BATUK W",
-  "status": "",
+  "status": "PRIORIDAD",
   "origen": "NACIONAL",
   "botonera": "BW-PANT PLANO PREMIUM",
   "semana": "",
@@ -6669,7 +6669,7 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+rose+site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "JULIO",
+  "MES INGRESO PRODUCCION": "AGOSTO",
   "NOMBRE": "",
   "COD": "FUTBOL FAN",
   "cantidad": 400,
@@ -6678,7 +6678,7 @@
   "color": "",
   "categoria": "PUNTO",
   "marca": "BATUK",
-  "status": "DISEÑO",
+  "status": "PRIORIDAD",
   "origen": "NACIONAL",
   "botonera": "B-REMERA DEP",
   "semana": "",
@@ -6688,7 +6688,7 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk++site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "JULIO",
+  "MES INGRESO PRODUCCION": "AGOSTO",
   "NOMBRE": "",
   "COD": "FUTBOL MILA",
   "cantidad": 400,
@@ -6697,7 +6697,7 @@
   "color": "",
   "categoria": "PUNTO",
   "marca": "BATUK",
-  "status": "DISEÑO",
+  "status": "PRIORIDAD",
   "origen": "NACIONAL",
   "botonera": "B-REMERA DEP",
   "semana": "",
