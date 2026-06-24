@@ -5766,7 +5766,7 @@
   "color": "AZUL, CAMEL, DESCRUDE, LILA, NEGRO, OCRE",
   "categoria": "PUNTO",
   "marca": "BATUK",
-  "status": "entreGADO",
+  "status": "ENTREGADO",
   "origen": "NACIONAL",
   "botonera": "B-REMERA BASIC",
   "semana": "1°",
@@ -7486,7 +7486,7 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+bosque+site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "SEPTIEMBRE",
+  "MES INGRESO PRODUCCION": "BAJA",
   "NOMBRE": "Matt",
   "COD": "B-31668",
   "cantidad": 1600,
@@ -7495,7 +7495,7 @@
   "color": "CRUDO, NEGRO",
   "categoria": "PUNTO",
   "marca": "BATUK W",
-  "status": "EN PROGRAMACION",
+  "status": "BAJA POR TELA",
   "origen": "NACIONAL",
   "botonera": "B-REMERA BASIC",
   "semana": "",
