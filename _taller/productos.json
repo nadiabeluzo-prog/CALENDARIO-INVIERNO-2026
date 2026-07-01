@@ -665,7 +665,7 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+olivia+site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "SEPTIEMBRE",
+  "MES INGRESO PRODUCCION": "JUNIO",
   "NOMBRE": "STICK",
   "COD": "BM-1467/A",
   "cantidad": 300,
@@ -684,7 +684,7 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+stick+site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "SEPTIEMBRE",
+  "MES INGRESO PRODUCCION": "JUNIO",
   "NOMBRE": "STICK",
   "COD": "BM-1467/B",
   "cantidad": 300,
@@ -836,7 +836,7 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+demi+site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "SEPTIEMBRE",
+  "MES INGRESO PRODUCCION": "JUNIO",
   "NOMBRE": "MADISON",
   "COD": "BM-2204",
   "cantidad": 450,
@@ -1330,7 +1330,7 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+mark+site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "JULIO",
+  "MES INGRESO PRODUCCION": "SEPTIEMBRE",
   "NOMBRE": "MARK",
   "COD": "B-1249-B",
   "cantidad": 300,
@@ -1368,7 +1368,7 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+mark+site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "JULIO",
+  "MES INGRESO PRODUCCION": "SEPTIEMBRE",
   "NOMBRE": "MARK",
   "COD": "B-1248-B",
   "cantidad": 300,
@@ -1798,7 +1798,7 @@
   "status": "LAVADERO",
   "origen": "NACIONAL",
   "botonera": "BW-DENIM DIF",
-  "semana": "4°",
+  "semana": "3°",
   "web_prefix": "Jean",
   "slug": "Jean-Stevie",
   "url_producto": "https://www.batuk.com.ar/productos/Jean-Stevie/",
@@ -3705,7 +3705,7 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+batuk+site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "JULIO",
+  "MES INGRESO PRODUCCION": "SEPTIEMBRE",
   "NOMBRE": "STRIKE",
   "COD": "B-1881",
   "cantidad": 400,
@@ -7712,5 +7712,24 @@
   "slug": "Producto-Cipres",
   "url_producto": "https://www.batuk.com.ar/productos/Producto-Cipres/",
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+cipres+site%3Abatuk.com.ar"
+ },
+ {
+  "MES INGRESO PRODUCCION": "SEPTIEMBRE",
+  "NOMBRE": "CAMEL",
+  "COD": "BM-7258",
+  "cantidad": 0,
+  "cortado": 0,
+  "rubro": "",
+  "color": "",
+  "categoria": "",
+  "marca": "BATUK W",
+  "status": "STOCK",
+  "origen": "NACIONAL",
+  "botonera": "B-SHORT PLANO DIF",
+  "semana": "",
+  "web_prefix": "Producto",
+  "slug": "Producto-Camel",
+  "url_producto": "https://www.batuk.com.ar/productos/Producto-Camel/",
+  "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+camel+site%3Abatuk.com.ar"
  }
 ]
