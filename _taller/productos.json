@@ -6308,25 +6308,6 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+corset+site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "JULIO",
-  "NOMBRE": "SOPHIE",
-  "COD": "BM-3880",
-  "cantidad": 600,
-  "cortado": 0,
-  "rubro": "REMERA",
-  "color": "",
-  "categoria": "PUNTO",
-  "marca": "BATUK W",
-  "status": "PARA CONFECCION",
-  "origen": "NACIONAL",
-  "botonera": "BW-REMERA BASIC",
-  "semana": "1°",
-  "web_prefix": "Remera",
-  "slug": "Remera-Sophie",
-  "url_producto": "https://www.batuk.com.ar/productos/Remera-Sophie/",
-  "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+sophie+site%3Abatuk.com.ar"
- },
- {
   "MES INGRESO PRODUCCION": "AGOSTO",
   "NOMBRE": "ROSE",
   "COD": "BM-3851",
@@ -7484,25 +7465,6 @@
   "slug": "Remera-Bosque",
   "url_producto": "https://www.batuk.com.ar/productos/Remera-Bosque/",
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+bosque+site%3Abatuk.com.ar"
- },
- {
-  "MES INGRESO PRODUCCION": "BAJA",
-  "NOMBRE": "Matt",
-  "COD": "B-31668",
-  "cantidad": 1600,
-  "cortado": 0,
-  "rubro": "REMERA",
-  "color": "CRUDO, NEGRO",
-  "categoria": "PUNTO",
-  "marca": "BATUK W",
-  "status": "BAJA POR TELA",
-  "origen": "NACIONAL",
-  "botonera": "B-REMERA BASIC",
-  "semana": "",
-  "web_prefix": "Remera",
-  "slug": "Remera-Matt",
-  "url_producto": "https://www.batuk.com.ar/productos/Remera-Matt/",
-  "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+matt+site%3Abatuk.com.ar"
  },
  {
   "MES INGRESO PRODUCCION": "SEPTIEMBRE",
