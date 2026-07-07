@@ -4277,7 +4277,7 @@
  {
   "MES INGRESO PRODUCCION": "JULIO",
   "NOMBRE": "TINT",
-  "COD": "B--7392",
+  "COD": "B-7392",
   "cantidad": 300,
   "cortado": 307,
   "rubro": "DENIM",
@@ -5571,7 +5571,7 @@
   "NOMBRE": "MUNDIAL 78",
   "COD": "B-31644",
   "cantidad": 600,
-  "cortado": 0,
+  "cortado": 456,
   "rubro": "REMERA",
   "color": "AZUL, NARANJA",
   "categoria": "PUNTO",
