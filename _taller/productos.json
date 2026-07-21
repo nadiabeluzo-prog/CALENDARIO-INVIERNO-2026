@@ -2641,7 +2641,7 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+frank+site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "SEPTIEMBRE",
+  "MES INGRESO PRODUCCION": "AGOSTO",
   "NOMBRE": "STICKERS",
   "COD": "BHP61BUCN08",
   "cantidad": 330,
@@ -4104,7 +4104,7 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+estampado+site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "SEPTIEMBRE",
+  "MES INGRESO PRODUCCION": "AGOSTO",
   "NOMBRE": "RETRO",
   "COD": "BHP60PANN17",
   "cantidad": 324,
@@ -4113,7 +4113,7 @@
   "color": "BORDO, MARINO, MARRON, NEGRO",
   "categoria": "PUNTO",
   "marca": "BATUK",
-  "status": "A ESPERA DEFINICION MES",
+  "status": "PARA PLANCHA",
   "origen": "NACIONAL",
   "botonera": "B-PANT PUNTO DIF",
   "semana": "",
@@ -4123,7 +4123,7 @@
   "url_buscar": "https://www.google.com/search?tbm=isch&q=batuk+retro+site%3Abatuk.com.ar"
  },
  {
-  "MES INGRESO PRODUCCION": "SEPTIEMBRE",
+  "MES INGRESO PRODUCCION": "AGOSTO",
   "NOMBRE": "RETRO",
   "COD": "BHP60FETN09",
   "cantidad": 324,
@@ -4132,7 +4132,7 @@
   "color": "BORDO, MARINO, MARRON, NEGRO",
   "categoria": "PUNTO",
   "marca": "BATUK",
-  "status": "A ESPERA DEFINICION MES",
+  "status": "PARA PLANCHA",
   "origen": "NACIONAL",
   "botonera": "B-ZHOOD PUNTO DIF",
   "semana": "",
