@@ -196,16 +196,26 @@ footer{max-width:1640px;margin:60px auto 0;padding:32px;color:var(--ink-mute);fo
 <script>
 const PRODUCTOS = __PRODUCTOS__;
 const COLOR_HEX = __COLORS__;
-const MES_ORDER = ['FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO','AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE','ENERO','A DEFINIR'];
+const BASE_MES_ORDER = ['FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO','AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE','ENERO'];
 const MES_LABEL = {'FEBRERO':'Febrero','MARZO':'Marzo','ABRIL':'Abril','MAYO':'Mayo','JUNIO':'Junio','JULIO':'Julio','AGOSTO':'Agosto','SEPTIEMBRE':'Septiembre','OCTUBRE':'Octubre','NOVIEMBRE':'Noviembre','DICIEMBRE':'Diciembre','ENERO':'Enero','A DEFINIR':'A definir'};
-// Normalizar variantes que escribe el maestro a la clave canónica "A DEFINIR"
-for(const _p of PRODUCTOS){const _m=(_p.mes||'').trim().toUpperCase();if(_m && _m!=='' && /DEFINIR/.test(_m)) _p.mes='A DEFINIR';}
+function mesLabel(m){ if(MES_LABEL[m]) return MES_LABEL[m]; return (m||'').charAt(0)+(m||'').slice(1).toLowerCase(); }
+// Normalizar variantes vacías o "a definir" que escribe el maestro a la clave canónica "A DEFINIR".
+// Cualquier otro valor (incluso uno nuevo que nunca vimos, ej "JULIO-AGOSTO") se deja tal cual:
+// así ningún producto desaparece del calendario solo porque el maestro usó una etiqueta de mes nueva.
+for(const _p of PRODUCTOS){const _m=(_p.mes||'').trim().toUpperCase(); _p.mes = (!_m || /DEFINIR/.test(_m)) ? 'A DEFINIR' : _m;}
+// Orden de meses: los conocidos en orden canónico, después cualquier etiqueta nueva
+// (orden alfabético) que haya aparecido en los datos, y "A definir" siempre al final.
+const _mesesEnDatos = new Set(PRODUCTOS.map(p=>p.mes));
+const MES_ORDER = BASE_MES_ORDER.filter(m=>_mesesEnDatos.has(m));
+const _extra = [..._mesesEnDatos].filter(m=>m!=='A DEFINIR' && BASE_MES_ORDER.indexOf(m)===-1).sort();
+MES_ORDER.push(..._extra);
+if(_mesesEnDatos.has('A DEFINIR')) MES_ORDER.push('A DEFINIR');
 const COUNTS={},UNITS={},PHOTOS={};
 for(const m of MES_ORDER){COUNTS[m]=0;UNITS[m]=0;PHOTOS[m]=0;}
 for(const p of PRODUCTOS){if(COUNTS[p.mes]!==undefined){COUNTS[p.mes]++;UNITS[p.mes]+=p.cant;if(p.foto)PHOTOS[p.mes]++;}}
 const TOT_SKU=Object.values(COUNTS).reduce((a,b)=>a+b,0),TOT_U=Object.values(UNITS).reduce((a,b)=>a+b,0),TOT_FOTO=Object.values(PHOTOS).reduce((a,b)=>a+b,0),TOT_MES=MES_ORDER.filter(m=>COUNTS[m]>0).length;
 let pillsHtml='<span class="pill active" data-mes="ALL">Todos<span class="c">'+TOT_SKU+'</span></span>';
-for(const m of MES_ORDER) if(COUNTS[m]>0) pillsHtml+='<span class="pill" data-mes="'+m+'">'+MES_LABEL[m]+'<span class="c">'+COUNTS[m]+'</span></span>';
+for(const m of MES_ORDER) if(COUNTS[m]>0) pillsHtml+='<span class="pill" data-mes="'+m+'">'+mesLabel(m)+'<span class="c">'+COUNTS[m]+'</span></span>';
 document.getElementById('month-pills').innerHTML=pillsHtml;
 function normMarca(s){return (s||'').trim().toUpperCase();}
 function statusGroup(s){return ((s||'').trim().toUpperCase()==='ENTREGADO')?'ENTREGADO':'PENDIENTE';}
@@ -315,7 +325,7 @@ function render(){
     const cortadoTotal=items.reduce((s,x)=>s+(x.cortado||0),0);
     const pendienteTotal=tu-cortadoTotal;
     const volSub=(cortadoTotal>0)?(' · <em class="vol-sub">'+cortadoTotal.toLocaleString('es-AR')+' cortadas + '+pendienteTotal.toLocaleString('es-AR')+' pedidas</em>'):'';
-    html+='<section class="month"><div class="month-head"><div class="month-name">'+MES_LABEL[m]+'</div><div class="month-meta"><strong>'+items.length+'</strong> productos · <strong>'+tu.toLocaleString('es-AR')+'</strong> unidades'+volSub+' · <strong>'+fc+'</strong> con foto</div></div>'+renderGrouped(items)+'</section>';
+    html+='<section class="month"><div class="month-head"><div class="month-name">'+mesLabel(m)+'</div><div class="month-meta"><strong>'+items.length+'</strong> productos · <strong>'+tu.toLocaleString('es-AR')+'</strong> unidades'+volSub+' · <strong>'+fc+'</strong> con foto</div></div>'+renderGrouped(items)+'</section>';
   }
   if(total===0) html='<div class="empty">No hay productos que coincidan con tu búsqueda</div>';
   board.innerHTML=html;
