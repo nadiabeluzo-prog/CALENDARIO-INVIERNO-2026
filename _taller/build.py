@@ -48,6 +48,7 @@ for r in raw:
         'origen': r.get('origen') or '',
         'botonera': r.get('botonera') or '',
         'semana': r.get('semana') or '',
+        'temporada': r.get('temporada') or '',
         'precio': precios.get(cod) or 0,
         'foto': foto,
         'pdf': None,

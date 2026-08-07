@@ -123,19 +123,63 @@ def score_photo(name, size):
     return s
 
 
+# Solapas del maestro a combinar (mismo criterio que _taller/sync.py).
+MAESTRO_SHEETS = ['INVIERNO', 'VERANO']
+
+
+def _norm_header(s):
+    return (str(s or '').strip().upper()
+            .replace('Á','A').replace('É','E').replace('Í','I').replace('Ó','O').replace('Ú','U').replace('Ñ','N'))
+
+
 def build_codbas_to_cod(maestro_path):
-    """Lee maestro y devuelve dict codbas -> (cod, nombre)."""
+    """Lee todas las solapas del maestro y devuelve dict codbas -> (cod, nombre).
+
+    Usa lookup de columnas por nombre de header (no por posición fija) para
+    no romperse si el maestro cambia de estructura. Si una solapa no tiene
+    columna CODIGO BAS (ej VERANO), simplemente no aporta nada a este mapeo
+    (esos productos no podrán auto-matchear foto por codbas).
+    """
     wb = openpyxl.load_workbook(maestro_path, data_only=True)
-    ws = wb['01-MAESTRO MATERIALES INV']
     cb_map = {}
-    for r in ws.iter_rows(min_row=2, values_only=True):
-        cod = r[4]
-        if not cod: continue
-        cod = str(cod).strip()
-        cb = str(r[5]).strip() if r[5] else ''
-        nom = str(r[23]).strip() if r[23] else ''
-        if cod and cb and cb not in cb_map:
-            cb_map[cb] = (cod, nom)
+    for sheet_name in MAESTRO_SHEETS:
+        if sheet_name not in wb.sheetnames:
+            log(f'[build_codbas_to_cod] AVISO: no existe la solapa "{sheet_name}", la salteo.')
+            continue
+        ws = wb[sheet_name]
+        header_row = next(ws.iter_rows(min_row=1, max_row=1, values_only=True))
+        headers = {_norm_header(c): i for i, c in enumerate(header_row) if c}
+
+        def find_col(*candidates):
+            for name in candidates:
+                key = _norm_header(name)
+                if key in headers:
+                    return headers[key]
+                for k, idx in headers.items():
+                    if key in k:
+                        return idx
+            return None
+
+        c_cod = find_col('ARTICULO', 'COD')
+        c_cb = find_col('CODIGO BAS')
+        c_nom = find_col('NOMBRE PRODUCTO', 'NOMBRE')
+        if c_cod is None:
+            log(f'[build_codbas_to_cod] [{sheet_name}] AVISO: no encontré columna ARTICULO/COD, salteo la hoja.')
+            continue
+        if c_cb is None:
+            log(f'[build_codbas_to_cod] [{sheet_name}] AVISO: sin columna CODIGO BAS, sus productos no matchean foto por codbas.')
+            continue
+        n = 0
+        for r in ws.iter_rows(min_row=2, values_only=True):
+            cod = r[c_cod]
+            if not cod: continue
+            cod = str(cod).strip()
+            cb = str(r[c_cb]).strip() if c_cb is not None and r[c_cb] else ''
+            nom = str(r[c_nom]).strip() if c_nom is not None and r[c_nom] else ''
+            if cod and cb and cb not in cb_map:
+                cb_map[cb] = (cod, nom)
+                n += 1
+        log(f'[build_codbas_to_cod] [{sheet_name}] {n} codbas mapeados')
     return cb_map
 
 

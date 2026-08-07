@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Calendario Producción · Invierno 2026 — Batuk</title>
+<title>Calendario Producción — Batuk</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
 <style>
@@ -98,6 +98,9 @@ main{max-width:1640px;margin:0 auto;padding:18px 32px 80px}
 .card .origen-tag{display:inline-block;margin-left:6px;padding:2px 6px;font-size:8px;text-transform:uppercase;letter-spacing:.14em;font-weight:600;border-radius:2px;vertical-align:1px}
 .card .origen-tag.nac{background:#eef2eb;color:#4a5d3a}
 .card .origen-tag.imp{background:#fff1e0;color:#a65a16;border:1px solid #f0c896}
+.card .temporada-tag{display:inline-block;margin-left:6px;padding:2px 6px;font-size:8px;text-transform:uppercase;letter-spacing:.14em;font-weight:600;border-radius:2px;vertical-align:1px}
+.card .temporada-tag.inv{background:#e6eef5;color:#2c4a73}
+.card .temporada-tag.ver{background:#fdf1e0;color:#a6641a}
 .card .info .pbot{font-size:9px;color:var(--ink-mute);margin-top:6px;text-transform:uppercase;letter-spacing:.1em;font-weight:500;line-height:1.2}
 .pill.has-sub{display:inline-flex;flex-direction:column;align-items:center;line-height:1.2;padding:6px 10px}
 .pill.has-sub .pill-main{display:flex;align-items:center;gap:6px}
@@ -160,7 +163,7 @@ footer{max-width:1640px;margin:60px auto 0;padding:32px;color:var(--ink-mute);fo
 <div class="brand">
   <span class="mark">Batuk</span>
   <span class="sep"></span>
-  <div class="meta"><span class="t">Calendario de Producción</span><span class="d">Invierno 2026 — Maestro Matriz</span></div>
+  <div class="meta"><span class="t">Calendario de Producción</span><span class="d">Maestro Matriz</span></div>
 </div>
 </div></header>
 <div class="controls"><div class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input id="q" type="text" placeholder="Buscar producto, código o color..." /></div><div class="pills" id="month-pills"></div></div>
@@ -177,6 +180,7 @@ footer{max-width:1640px;margin:60px auto 0;padding:32px;color:var(--ink-mute);fo
 <h2 id="m-name"></h2><div class="meta" id="m-meta"></div>
 <div class="row"><span>Código</span><span id="m-cod"></span></div>
 <div class="row"><span>Mes ingreso producción</span><span id="m-mes"></span></div>
+<div class="row"><span>Temporada</span><span id="m-temporada"></span></div>
 <div class="row"><span>Cantidad</span><span id="m-cant"></span></div>
 <div class="row"><span>Rubro</span><span id="m-rubro"></span></div>
 <div class="row"><span>Color</span><span id="m-color"></span></div>
@@ -188,7 +192,7 @@ footer{max-width:1640px;margin:60px auto 0;padding:32px;color:var(--ink-mute);fo
 <a id="m-busc" target="_blank" class="btn-primary">Ver en batuk.com.ar</a>
 <a id="m-google" target="_blank">Buscar en Google</a>
 </div></div></div>
-<footer>Generado de "MAESTRO-MATRIZ DE COLECCION INVIERNO 2026.xlsx" · Hoja 01-MAESTRO MATERIALES INV · Columna MES INGRESO PRODUCCION</footer>
+<footer>Generado de "MAESTRO-MATRIZ DE COLECCION.xlsx" · Hojas INVIERNO + VERANO · Columna MES INGRESO PRODUCCION</footer>
 <script>
 const PRODUCTOS = __PRODUCTOS__;
 const COLOR_HEX = __COLORS__;
@@ -262,8 +266,10 @@ function renderCard(p){
   const brand=escapeHtml(normMarca(p.marca));
   const og=origenNorm(p.origen);
   const origenTag=og==='IMPORTADO'?'<span class="origen-tag imp">Importado</span>':(og==='NACIONAL'?'<span class="origen-tag nac">Nacional</span>':'');
+  const temp=(p.temporada||'').trim().toUpperCase();
+  const tempTag=temp==='VERANO'?'<span class="temporada-tag ver">Verano</span>':(temp==='INVIERNO'?'<span class="temporada-tag inv">Invierno</span>':'');
   const bot=p.botonera?'<div class="pbot">'+escapeHtml(p.botonera)+'</div>':'';
-  return '<div class="card '+(has?'has-photo':'')+'" data-idx="'+p._i+'" data-brand="'+brand+'"><div class="photo" style="--ph-c1:'+c1+';--ph-c2:'+c2+';">'+img+'<div class="placeholder"><div class="name">'+escapeHtml(p.nombre)+'</div><div class="sub">'+escapeHtml(p.rubro||'')+'</div></div><div class="cod-badge">'+escapeHtml(p.cod)+'</div><div class="qty-badge">'+p.cant.toLocaleString('es-AR')+'<span class="u">u</span></div>'+flag+'</div><div class="info"><div class="pname" title="'+escapeHtml(p.nombre)+'">'+escapeHtml(p.nombre)+'</div><div class="prubro">'+escapeHtml(p.rubro||'')+'</div><div class="pmarca">'+brand+origenTag+'</div>'+bot+'<div class="colors">'+dots+'</div></div></div>';
+  return '<div class="card '+(has?'has-photo':'')+'" data-idx="'+p._i+'" data-brand="'+brand+'"><div class="photo" style="--ph-c1:'+c1+';--ph-c2:'+c2+';">'+img+'<div class="placeholder"><div class="name">'+escapeHtml(p.nombre)+'</div><div class="sub">'+escapeHtml(p.rubro||'')+'</div></div><div class="cod-badge">'+escapeHtml(p.cod)+'</div><div class="qty-badge">'+p.cant.toLocaleString('es-AR')+'<span class="u">u</span></div>'+flag+'</div><div class="info"><div class="pname" title="'+escapeHtml(p.nombre)+'">'+escapeHtml(p.nombre)+'</div><div class="prubro">'+escapeHtml(p.rubro||'')+'</div><div class="pmarca">'+brand+origenTag+tempTag+'</div>'+bot+'<div class="colors">'+dots+'</div></div></div>';
 }
 function renderGrouped(items){
   // Si filtro entregado solo: grid plano
@@ -309,7 +315,7 @@ function render(){
     const cortadoTotal=items.reduce((s,x)=>s+(x.cortado||0),0);
     const pendienteTotal=tu-cortadoTotal;
     const volSub=(cortadoTotal>0)?(' · <em class="vol-sub">'+cortadoTotal.toLocaleString('es-AR')+' cortadas + '+pendienteTotal.toLocaleString('es-AR')+' pedidas</em>'):'';
-    html+='<section class="month"><div class="month-head"><div class="month-name">'+MES_LABEL[m]+'<em>· Invierno 26</em></div><div class="month-meta"><strong>'+items.length+'</strong> productos · <strong>'+tu.toLocaleString('es-AR')+'</strong> unidades'+volSub+' · <strong>'+fc+'</strong> con foto</div></div>'+renderGrouped(items)+'</section>';
+    html+='<section class="month"><div class="month-head"><div class="month-name">'+MES_LABEL[m]+'</div><div class="month-meta"><strong>'+items.length+'</strong> productos · <strong>'+tu.toLocaleString('es-AR')+'</strong> unidades'+volSub+' · <strong>'+fc+'</strong> con foto</div></div>'+renderGrouped(items)+'</section>';
   }
   if(total===0) html='<div class="empty">No hay productos que coincidan con tu búsqueda</div>';
   board.innerHTML=html;
@@ -324,6 +330,7 @@ function openModal(p){
   document.getElementById('m-meta').textContent=(p.rubro||'')+' · '+(p.cat||'')+' · '+(p.marca||'');
   document.getElementById('m-cod').textContent=p.cod;
   document.getElementById('m-mes').textContent=MES_LABEL[p.mes]||p.mes;
+  document.getElementById('m-temporada').textContent=p.temporada||'—';
   document.getElementById('m-cant').textContent=p.cant.toLocaleString('es-AR')+' u.';
   document.getElementById('m-rubro').textContent=p.rubro||'—';
   document.getElementById('m-color').textContent=p.color||'—';
