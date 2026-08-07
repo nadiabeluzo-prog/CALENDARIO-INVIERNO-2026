@@ -21,7 +21,7 @@ n_skip_rs = 0
 for r in raw:
     marca = (r.get('marca') or '').strip().upper()
     mes = (r.get('MES INGRESO PRODUCCION') or '').strip().upper()
-    if marca == 'RS' or mes == 'RS':
+    if marca == 'RS' or mes == 'RS' or mes.startswith('PASA'):
         n_skip_rs += 1
         continue
     cod = (r.get('COD') or '').strip()

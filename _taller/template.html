@@ -61,17 +61,6 @@ header.top{position:sticky;top:0;z-index:50;background:rgba(250,247,242,.96);bac
 .select-wrap select:focus + .select-arrow{color:var(--cream)}
 .select-arrow{position:absolute;right:12px;top:50%;transform:translateY(-50%);pointer-events:none;font-size:9px;color:var(--ink);letter-spacing:0;font-weight:700;transition:color .15s ease}
 .legend{max-width:1640px;margin:14px auto 0;padding:0 32px;color:var(--ink-mute);font-size:11px;letter-spacing:.04em}
-.ticket-bar{max-width:1640px;margin:14px auto 0;padding:0 32px;display:flex;gap:0;flex-wrap:wrap}
-.ticket{flex:1;min-width:170px;border:1px solid var(--line);border-right:0;padding:12px 16px;background:var(--paper);display:flex;flex-direction:column;gap:6px}
-.ticket:first-child{border-radius:8px 0 0 8px}
-.ticket:last-child{border-right:1px solid var(--line);border-radius:0 8px 8px 0}
-.ticket .lbl{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-mute);font-weight:700}
-.ticket .num{font-family:'Inter',sans-serif;font-size:16px;font-weight:700;color:var(--ink);letter-spacing:0}
-.ticket .sub{font-family:'Inter',sans-serif;font-size:16px;font-weight:500;color:var(--ink-mute);letter-spacing:0}
-.ticket.entregado{background:linear-gradient(180deg,var(--paper) 0,#f0ebe0 100%)}
-.ticket.pendiente{background:linear-gradient(180deg,var(--paper) 0,#f3ede2 100%)}
-.card .pprice{font-family:'Playfair Display',Georgia,serif;font-size:14px;font-weight:600;color:var(--ink);margin-top:4px;letter-spacing:-.01em}
-.modal .row.price{font-weight:700}
 main{max-width:1640px;margin:0 auto;padding:18px 32px 80px}
 .month{margin-top:36px}
 .month-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:22px;padding-bottom:14px;border-bottom:1px solid var(--line-strong)}
@@ -114,7 +103,6 @@ main{max-width:1640px;margin:0 auto;padding:18px 32px 80px}
 .pill.has-sub .pill-main{display:flex;align-items:center;gap:6px}
 .pill.has-sub .pill-sub{font-size:9px;color:var(--ink-mute);margin-top:2px;text-transform:none;letter-spacing:0;font-weight:500}
 .pill.has-sub.active .pill-sub{color:rgba(255,255,255,.8)}
-.ticket .brk{display:block;font-size:10px;color:var(--ink-mute);margin-top:2px;letter-spacing:.06em;font-weight:500}
 .group-head{font-family:'Inter',sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:.24em;font-weight:800;padding:14px 20px;margin:28px 0 16px;display:flex;align-items:center;justify-content:space-between;border:2px solid;border-radius:6px;position:relative}
 .group-head::before{content:"";position:absolute;left:-2px;top:-2px;bottom:-2px;width:6px;border-radius:6px 0 0 6px}
 .group-head.entregado{color:#3d5230;background:#eef2eb;border-color:#9bb287}
@@ -158,18 +146,12 @@ footer{max-width:1640px;margin:60px auto 0;padding:32px;color:var(--ink-mute);fo
   .card .pname{font-size:10px;line-height:1.2}
   .card .prubro{font-size:8px;letter-spacing:.08em}
   .card .pmarca{font-size:8px;letter-spacing:.08em}
-  .card .pprice{font-size:11px}
   .card .info{padding:6px 6px 8px}
   .card .qty-badge{padding:2px 5px;font-size:8px;top:5px;right:5px}
   .card .cod-badge{padding:2px 4px;font-size:7px;top:5px;left:5px;letter-spacing:.04em}
   .card .photo-flag{font-size:7px;padding:2px 4px}
   .card .color-dot{width:7px;height:7px}
   .card .colors{gap:3px}
-  .ticket-bar{padding:0 14px;flex-wrap:nowrap;gap:6px}
-  .ticket{flex:1;min-width:0;padding:8px 8px;border-radius:6px !important;border:1px solid var(--line) !important;gap:3px}
-  .ticket .lbl{font-size:8px;letter-spacing:.1em}
-  .ticket .num{font-size:13px}
-  .ticket .sub{font-size:11px}
   .select-wrap{flex:1;min-width:0}
   .select-wrap select{width:100%;min-width:0;font-size:10px;padding:7px 28px 7px 10px}
 }
@@ -186,7 +168,6 @@ footer{max-width:1640px;margin:60px auto 0;padding:32px;color:var(--ink-mute);fo
 <div class="filter-row"><span class="label">Rubro</span><div class="select-wrap"><select id="rubro-select"></select><span class="select-arrow">v</span></div></div>
 <div class="filter-row"><span class="label">Estado</span><div class="pills" id="status-pills"></div></div>
 <div class="filter-row"><span class="label">Origen</span><div class="pills" id="origen-pills"></div></div>
-<div class="ticket-bar" id="ticket-bar"></div>
 <div class="legend">Hacé click en cualquier producto para ver detalle. Las tarjetas con bandera <strong>FOTO</strong> muestran el geometral o foto subida.</div>
 <main id="board"></main>
 <div class="modal" id="modal" onclick="closeModal()">
@@ -197,7 +178,6 @@ footer{max-width:1640px;margin:60px auto 0;padding:32px;color:var(--ink-mute);fo
 <div class="row"><span>Código</span><span id="m-cod"></span></div>
 <div class="row"><span>Mes ingreso producción</span><span id="m-mes"></span></div>
 <div class="row"><span>Cantidad</span><span id="m-cant"></span></div>
-<div class="row price"><span>Precio sugerido</span><span id="m-precio"></span></div>
 <div class="row"><span>Rubro</span><span id="m-rubro"></span></div>
 <div class="row"><span>Color</span><span id="m-color"></span></div>
 <div class="row"><span>Categoría</span><span id="m-cat"></span></div>
@@ -212,21 +192,21 @@ footer{max-width:1640px;margin:60px auto 0;padding:32px;color:var(--ink-mute);fo
 <script>
 const PRODUCTOS = __PRODUCTOS__;
 const COLOR_HEX = __COLORS__;
-const MES_ORDER = ['FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO','A DEFINIR'];
-const MES_LABEL = {'FEBRERO':'Febrero','MARZO':'Marzo','ABRIL':'Abril','MAYO':'Mayo','JUNIO':'Junio','JULIO':'Julio','A DEFINIR':'A definir'};
+const MES_ORDER = ['FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO','AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE','ENERO','A DEFINIR'];
+const MES_LABEL = {'FEBRERO':'Febrero','MARZO':'Marzo','ABRIL':'Abril','MAYO':'Mayo','JUNIO':'Junio','JULIO':'Julio','AGOSTO':'Agosto','SEPTIEMBRE':'Septiembre','OCTUBRE':'Octubre','NOVIEMBRE':'Noviembre','DICIEMBRE':'Diciembre','ENERO':'Enero','A DEFINIR':'A definir'};
 // Normalizar variantes que escribe el maestro a la clave canónica "A DEFINIR"
 for(const _p of PRODUCTOS){const _m=(_p.mes||'').trim().toUpperCase();if(_m && _m!=='' && /DEFINIR/.test(_m)) _p.mes='A DEFINIR';}
 const COUNTS={},UNITS={},PHOTOS={};
 for(const m of MES_ORDER){COUNTS[m]=0;UNITS[m]=0;PHOTOS[m]=0;}
 for(const p of PRODUCTOS){if(COUNTS[p.mes]!==undefined){COUNTS[p.mes]++;UNITS[p.mes]+=p.cant;if(p.foto)PHOTOS[p.mes]++;}}
 const TOT_SKU=Object.values(COUNTS).reduce((a,b)=>a+b,0),TOT_U=Object.values(UNITS).reduce((a,b)=>a+b,0),TOT_FOTO=Object.values(PHOTOS).reduce((a,b)=>a+b,0),TOT_MES=MES_ORDER.filter(m=>COUNTS[m]>0).length;
-let pillsHtml='<span class="pill" data-mes="ALL">Todos<span class="c">'+TOT_SKU+'</span></span>';
-for(const m of MES_ORDER) if(COUNTS[m]>0) pillsHtml+='<span class="pill'+(m==='MAYO'?' active':'')+'" data-mes="'+m+'">'+MES_LABEL[m]+'<span class="c">'+COUNTS[m]+'</span></span>';
+let pillsHtml='<span class="pill active" data-mes="ALL">Todos<span class="c">'+TOT_SKU+'</span></span>';
+for(const m of MES_ORDER) if(COUNTS[m]>0) pillsHtml+='<span class="pill" data-mes="'+m+'">'+MES_LABEL[m]+'<span class="c">'+COUNTS[m]+'</span></span>';
 document.getElementById('month-pills').innerHTML=pillsHtml;
 function normMarca(s){return (s||'').trim().toUpperCase();}
 function statusGroup(s){return ((s||'').trim().toUpperCase()==='ENTREGADO')?'ENTREGADO':'PENDIENTE';}
 function origenNorm(s){return (s||'').trim().toUpperCase();}
-let currentFilter='MAYO',currentSearch='',currentMarca='ALL',currentRubro='ALL',currentStatus='ALL',currentOrigen='ALL';
+let currentFilter='ALL',currentSearch='',currentMarca='ALL',currentRubro='ALL',currentStatus='ALL',currentOrigen='ALL';
 function updatePills(){
   const months=currentFilter==='ALL'?MES_ORDER:[currentFilter];
   const subset=PRODUCTOS.filter(p=>months.indexOf(p.mes)>=0);
@@ -283,31 +263,7 @@ function renderCard(p){
   const og=origenNorm(p.origen);
   const origenTag=og==='IMPORTADO'?'<span class="origen-tag imp">Importado</span>':(og==='NACIONAL'?'<span class="origen-tag nac">Nacional</span>':'');
   const bot=p.botonera?'<div class="pbot">'+escapeHtml(p.botonera)+'</div>':'';
-  return '<div class="card '+(has?'has-photo':'')+'" data-idx="'+p._i+'" data-brand="'+brand+'"><div class="photo" style="--ph-c1:'+c1+';--ph-c2:'+c2+';">'+img+'<div class="placeholder"><div class="name">'+escapeHtml(p.nombre)+'</div><div class="sub">'+escapeHtml(p.rubro||'')+'</div></div><div class="cod-badge">'+escapeHtml(p.cod)+'</div><div class="qty-badge">'+p.cant.toLocaleString('es-AR')+'<span class="u">u</span></div>'+flag+'</div><div class="info"><div class="pname" title="'+escapeHtml(p.nombre)+'">'+escapeHtml(p.nombre)+'</div><div class="prubro">'+escapeHtml(p.rubro||'')+'</div><div class="pmarca">'+brand+origenTag+'</div>'+bot+'<div class="colors">'+dots+'</div>'+(p.precio?'<div class="pprice">$ '+p.precio.toLocaleString('es-AR')+'</div>':'')+'</div></div>';
-}
-function fmt$(n){return '$ '+Math.round(n).toLocaleString('es-AR');}
-function renderTicket(){
-  const months=currentFilter==='ALL'?MES_ORDER:[currentFilter];
-  const q=currentSearch.toLowerCase();
-  const items=PRODUCTOS.filter(p=>months.indexOf(p.mes)>=0)
-    .filter(p=>currentMarca==='ALL'||normMarca(p.marca)===currentMarca)
-    .filter(p=>currentRubro==='ALL'||(p.rubro||'').trim().toUpperCase()===currentRubro)
-    .filter(p=>currentOrigen==='ALL'||origenNorm(p.origen)===currentOrigen)
-    .filter(p=>!q||(p.nombre+' '+p.cod+' '+p.color+' '+p.rubro+' '+p.marca).toLowerCase().includes(q));
-  const ent=items.filter(p=>statusGroup(p.status)==='ENTREGADO');
-  const pen=items.filter(p=>statusGroup(p.status)==='PENDIENTE');
-  function unidades(x){return (x.cortado&&x.cortado>0)?x.cortado:(x.cant||0);}
-  function rev(arr){return arr.reduce((s,x)=>s+((x.precio||0)*unidades(x)),0);}
-  function units(arr){return arr.reduce((s,x)=>s+unidades(x),0);}
-  function avgP(arr){const w=arr.filter(x=>x.precio>0);if(w.length===0)return 0;return w.reduce((s,x)=>s+x.precio,0)/w.length;}
-  const tEnt=rev(ent),tPen=rev(pen),tAll=rev(items);
-  const uEnt=units(ent),uPen=units(pen),uAll=units(items);
-  const pEnt=avgP(ent),pPen=avgP(pen),pAll=avgP(items);
-  function brk(arr){const n=arr.filter(x=>origenNorm(x.origen)==='NACIONAL').length;const i=arr.filter(x=>origenNorm(x.origen)==='IMPORTADO').length;return '<span class="brk">Nac '+n+' · Imp '+i+'</span>';}
-  document.getElementById('ticket-bar').innerHTML=
-    '<div class="ticket entregado"><span class="lbl">Facturación esperada · Entregado</span><span class="num">'+fmt$(tEnt)+'</span><span class="sub">Precio prom. '+fmt$(pEnt)+' · '+ent.length+' SKUs · '+uEnt.toLocaleString('es-AR')+' u.</span>'+brk(ent)+'</div>'+
-    '<div class="ticket pendiente"><span class="lbl">Facturación esperada · Pendiente</span><span class="num">'+fmt$(tPen)+'</span><span class="sub">Precio prom. '+fmt$(pPen)+' · '+pen.length+' SKUs · '+uPen.toLocaleString('es-AR')+' u.</span>'+brk(pen)+'</div>'+
-    '<div class="ticket"><span class="lbl">Facturación esperada · Total</span><span class="num">'+fmt$(tAll)+'</span><span class="sub">Precio prom. '+fmt$(pAll)+' · '+items.length+' SKUs · '+uAll.toLocaleString('es-AR')+' u.</span>'+brk(items)+'</div>';
+  return '<div class="card '+(has?'has-photo':'')+'" data-idx="'+p._i+'" data-brand="'+brand+'"><div class="photo" style="--ph-c1:'+c1+';--ph-c2:'+c2+';">'+img+'<div class="placeholder"><div class="name">'+escapeHtml(p.nombre)+'</div><div class="sub">'+escapeHtml(p.rubro||'')+'</div></div><div class="cod-badge">'+escapeHtml(p.cod)+'</div><div class="qty-badge">'+p.cant.toLocaleString('es-AR')+'<span class="u">u</span></div>'+flag+'</div><div class="info"><div class="pname" title="'+escapeHtml(p.nombre)+'">'+escapeHtml(p.nombre)+'</div><div class="prubro">'+escapeHtml(p.rubro||'')+'</div><div class="pmarca">'+brand+origenTag+'</div>'+bot+'<div class="colors">'+dots+'</div></div></div>';
 }
 function renderGrouped(items){
   // Si filtro entregado solo: grid plano
@@ -340,7 +296,6 @@ function renderGrouped(items){
 }
 function render(){
   PRODUCTOS.forEach((p,i)=>p._i=i);
-  renderTicket();
   const board=document.getElementById('board'),q=currentSearch.toLowerCase();
   let html='',total=0;
   const months=currentFilter==='ALL'?MES_ORDER:[currentFilter];
@@ -370,7 +325,6 @@ function openModal(p){
   document.getElementById('m-cod').textContent=p.cod;
   document.getElementById('m-mes').textContent=MES_LABEL[p.mes]||p.mes;
   document.getElementById('m-cant').textContent=p.cant.toLocaleString('es-AR')+' u.';
-document.getElementById('m-precio').textContent=p.precio?('$ '+p.precio.toLocaleString('es-AR')):'—';
   document.getElementById('m-rubro').textContent=p.rubro||'—';
   document.getElementById('m-color').textContent=p.color||'—';
   document.getElementById('m-cat').textContent=p.cat||'—';
@@ -408,14 +362,6 @@ document.getElementById('status-pills').addEventListener('click',e=>{
   updatePills(); render();
 });
 document.getElementById('origen-pills').addEventListener('click',e=>{
-  const p=e.target.closest('.pill'); if(!p) return;
-  currentOrigen=p.dataset.origen;
-  updatePills(); render();
-});
-document.getElementById('q').addEventListener('input',e=>{currentSearch=e.target.value;render();});
-render();
-</script></body></html>
-ventListener('click',e=>{
   const p=e.target.closest('.pill'); if(!p) return;
   currentOrigen=p.dataset.origen;
   updatePills(); render();

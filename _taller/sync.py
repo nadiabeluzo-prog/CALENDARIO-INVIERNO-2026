@@ -55,23 +55,50 @@ def main(xlsx_path):
     wb = openpyxl.load_workbook(xlsx_path, data_only=True)
     ws = wb['01-MAESTRO MATERIALES INV']
 
-    # column indices (0-based) — actualizado 2026-04-28 con columna ORIGEN nueva
-    C_ORIGEN = 1
-    C_MARCA = 2
-    C_COD = 4
-    C_CAT = 6
-    C_RUBRO = 7
-    C_BOTONERA = 8
-    C_DESC = 9
-    C_MES_ING = 10
-    C_MES = 11
-    C_SEMANA = 16
-    C_STATUS = 17
-    C_NOMBRE = 23
-    C_COLOR_BAS = 25
-    C_UNID = 28
-    C_CORTADO = 34
-    C_COSTO_OB = 45
+    # Header-based column lookup (robusto a cambios de orden de columnas)
+    header_row = next(ws.iter_rows(min_row=1, max_row=1, values_only=True))
+    def _norm(s):
+        return (str(s or '').strip().upper()
+                .replace('Á','A').replace('É','E').replace('Í','I').replace('Ó','O').replace('Ú','U').replace('Ñ','N'))
+    headers = {_norm(c): i for i, c in enumerate(header_row) if c}
+    def find_col(*candidates, required=True):
+        for name in candidates:
+            key = _norm(name)
+            if key in headers:
+                return headers[key]
+            for k, idx in headers.items():
+                if key in k:
+                    return idx
+        if required:
+            raise KeyError(f'Columna no encontrada en maestro: {candidates}. Headers disponibles: {list(headers)}')
+        return None
+    C_ORIGEN  = find_col('ORIGEN')
+    C_MARCA   = find_col('MARCA')
+    # IMPORTANTE: 'ARTICULO' es el código corto (ej B-1229) que coincide con los
+    # nombres de archivo en /fotos y con las URLs de batuk.com.ar. 'CODIGO BAS' es
+    # un código interno distinto (ej BHP50DENN07). Buscar ARTICULO primero para
+    # no matchear por error contra CODIGO BAS (que contiene la substring "COD").
+    C_COD     = find_col('ARTICULO', 'COD')
+    C_CAT     = find_col('CATEGORIA PLAN','CATEGORIA', required=False)
+    C_RUBRO   = find_col('RUBRO')
+    C_BOTONERA= find_col('BOTONERA')
+    C_DESC    = find_col('DESCRIPCION A PRODUCCION','DESCRIPCION', required=False) or 9
+    C_MES_ING = find_col('MES INGRESO', required=False) or 10
+    C_MES     = find_col('MES INGRESO PRODUCCION')
+    C_SEMANA  = find_col('SEMANA DEL MES','SEMANA')
+    C_STATUS  = find_col('STATUS')
+    C_NOMBRE  = find_col('NOMBRE PRODUCTO','NOMBRE')
+    C_COLOR_BAS = find_col('COLOR BAS','COLOR')
+    C_UNID    = find_col('UNID PEDIDAS','UNID','UNIDADES PEDIDAS','UNIDADES')
+    C_CORTADO = find_col('CORTADO','UNID CORTADAS')
+    # COSTO OB ya no vive en esta hoja (se movió a "05-COSTOS OBJETIVOS"). La dejamos
+    # opcional para que sync.py no crashee; si no está, no se calculan precios.
+    C_COSTO_OB= find_col('COSTO OB','COSTO OBJETIVO','COSTO', required=False)
+    print(f'[sync.py] Columnas detectadas: ORIGEN={C_ORIGEN}, MARCA={C_MARCA}, COD={C_COD}, CAT={C_CAT}, NOMBRE={C_NOMBRE}, MES={C_MES}, STATUS={C_STATUS}, UNID={C_UNID}, CORTADO={C_CORTADO}, COSTO={C_COSTO_OB}')
+    if C_CAT is None:
+        print('[sync.py] AVISO: no se encontró columna CATEGORIA en el maestro. Categoría quedará vacía.')
+    if C_COSTO_OB is None:
+        print('[sync.py] AVISO: no se encontró columna COSTO en el maestro. No se calcularán precios.')
 
     by_cod = {}
     for r in ws.iter_rows(min_row=2, values_only=True):
@@ -96,7 +123,7 @@ def main(xlsx_path):
                 'cortado': 0,
                 'rubro': _s(r[C_RUBRO]),
                 '_colors': set(),
-                'categoria': _s(r[C_CAT]),
+                'categoria': _s(r[C_CAT]) if C_CAT is not None else '',
                 'marca': marca,
                 'status': _s(r[C_STATUS]),
                 'origen': _s(r[C_ORIGEN]),
@@ -113,7 +140,7 @@ def main(xlsx_path):
         col = (r[C_COLOR_BAS] or '').strip() if r[C_COLOR_BAS] else ''
         if col:
             by_cod[cod]['_colors'].add(col.upper())
-        if by_cod[cod]['_costo'] is None:
+        if C_COSTO_OB is not None and by_cod[cod]['_costo'] is None:
             cnum = parse_money(r[C_COSTO_OB])
             if cnum is not None:
                 by_cod[cod]['_costo'] = cnum
