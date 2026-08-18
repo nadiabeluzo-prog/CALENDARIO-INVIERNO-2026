@@ -3971,7 +3971,7 @@
   "marca": "BATUK W",
   "status": "ENTREGADO",
   "origen": "NACIONAL",
-  "botonera": "B-REMERA EST. DIF",
+  "botonera": "B-REMERA EST DIF",
   "semana": "1°",
   "temporada": "VERANO",
   "web_prefix": "Remera",
@@ -8122,7 +8122,7 @@
  {
   "MES INGRESO PRODUCCION": "",
   "NOMBRE": "A DEFINIR",
-  "COD": "B-31515",
+  "COD": "B-31715",
   "cantidad": 800,
   "cortado": 0,
   "rubro": "REMERA",
